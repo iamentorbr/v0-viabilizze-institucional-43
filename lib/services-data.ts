@@ -58,6 +58,7 @@ export const services: Service[] = [
       "Soluções customizadas para sua realidade",
       "Aumento da eficiência operacional",
       "Redução de perdas e desperdícios",
+      "Metodologia Exclusiva para Mitigação de Problemas",
       "Suporte técnico contínuo"
     ],
     process: [
