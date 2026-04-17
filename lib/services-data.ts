@@ -187,8 +187,8 @@ export const services: Service[] = [
     icon: GraduationCap,
     title: "Treinamentos",
     description: "Capacitação de equipes em boas práticas de fabricação, segurança de bebidas e processos produtivos.",
-    features: ["BPF", "Manipuladores", "Liderança técnica"],
-    fullDescription: "Nossos treinamentos são desenvolvidos para capacitar equipes em todos os níveis, desde manipuladores de bebidas até lideranças técnicas. Utilizamos metodologias práticas e interativas, adaptadas à realidade da sua empresa, garantindo a efetiva absorção do conhecimento e mudança de comportamento.",
+    features: ["Boas Práticas", "BPF", "APPCC", "Treinamento de ISO", "Treinamento de Sensorial", "Entre outros"],
+    fullDescription: "Nossos treinamentos são desenvolvidos para capacitar equipes em todos os níveis. Utilizamos metodologias práticas e interativas, adaptadas à realidade da sua empresa, garantindo a efetiva absorção do conhecimento e mudança de comportamento.",
     benefits: [
       "Equipes mais qualificadas",
       "Redução de erros operacionais",
