@@ -42,7 +42,7 @@ export function About() {
               Expertise que <span className="text-primary">transforma</span> negócios
             </h2>
             
-            <div className="space-y-6 text-muted-foreground">
+            <div className="space-y-6 text-secondary-foreground/80">
               <p className="text-lg leading-relaxed">
                 A <strong className="text-secondary-foreground">Viabilizze Assessoria Industrial</strong> nasceu da paixão pela indústria de bebidas e do desejo de transformar desafios em oportunidades de crescimento.
               </p>
@@ -61,7 +61,7 @@ export function About() {
                 {values.map((value) => (
                   <div key={value} className="flex items-center gap-2">
                     <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" />
-                    <span className="text-sm text-muted-foreground">{value}</span>
+                    <span className="text-sm text-secondary-foreground/80">{value}</span>
                   </div>
                 ))}
               </div>

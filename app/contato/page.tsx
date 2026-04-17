@@ -46,7 +46,7 @@ export default function ContatoPage() {
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-secondary-foreground mb-4">
               Entre em <span className="text-primary">Contato</span>
             </h1>
-            <p className="text-lg text-secondary-foreground/80">
+            <p className="text-lg text-secondary-foreground/80 leading-relaxed">
               Estamos prontos para ajudar sua indústria a alcançar novos patamares de qualidade e eficiência.
             </p>
           </div>
@@ -233,7 +233,7 @@ export default function ContatoPage() {
                 className="h-4 w-auto"
               />
             </div>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-secondary-foreground/70">
               {new Date().getFullYear()} Viabilizze Assessoria Industrial. Todos os direitos reservados.
             </p>
           </div>

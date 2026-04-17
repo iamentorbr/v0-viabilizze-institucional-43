@@ -100,7 +100,7 @@ export function Contact() {
                 <h4 className="font-semibold text-secondary-foreground mb-2">
                   Precisa de uma resposta rápida?
                 </h4>
-                <p className="text-sm text-secondary-foreground mb-4">
+                <p className="text-sm text-secondary-foreground/70 mb-4">
                   Nossa equipe está pronta para atender você de segunda a sexta, das 8h às 18h.
                 </p>
                 <Button asChild className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">

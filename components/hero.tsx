@@ -28,7 +28,7 @@ export function Hero() {
               <span className="text-balance"> em referência</span>
             </h1>
 
-            <p className="text-lg md:text-xl text-muted-foreground max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed">
+            <p className="text-lg md:text-xl text-secondary-foreground/80 max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed">
               Assessoria especializada para a indústria de bebidas. Da concepção do produto à conformidade regulatória, estamos ao seu lado em cada etapa.
             </p>
 
@@ -42,18 +42,18 @@ export function Hero() {
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-6 mt-12 pt-12 border-t border-border/50">
+            <div className="grid grid-cols-3 gap-6 mt-12 pt-12 border-t border-secondary-foreground/20">
               <div>
                 <p className="text-3xl lg:text-4xl font-bold text-primary">+100</p>
-                <p className="text-sm text-muted-foreground mt-1">Projetos Realizados</p>
+                <p className="text-sm text-secondary-foreground/70 mt-1">Projetos Realizados</p>
               </div>
               <div>
                 <p className="text-3xl lg:text-4xl font-bold text-primary">+10</p>
-                <p className="text-sm text-muted-foreground mt-1">Anos de Experiência</p>
+                <p className="text-sm text-secondary-foreground/70 mt-1">Anos de Experiência</p>
               </div>
               <div>
                 <p className="text-3xl lg:text-4xl font-bold text-primary">98%</p>
-                <p className="text-sm text-muted-foreground mt-1">Clientes Satisfeitos</p>
+                <p className="text-sm text-secondary-foreground/70 mt-1">Clientes Satisfeitos</p>
               </div>
             </div>
           </div>

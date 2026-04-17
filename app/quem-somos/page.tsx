@@ -183,7 +183,7 @@ export default function QuemSomosPage() {
             <h2 className="text-2xl md:text-3xl font-bold text-secondary-foreground mb-4">
               Nossa Expertise
             </h2>
-            <p className="text-muted-foreground">
+            <p className="text-secondary-foreground/70">
               Áreas em que nos destacamos para entregar os melhores resultados
             </p>
           </div>
@@ -206,13 +206,13 @@ export default function QuemSomosPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 lg:py-20 bg-gray-100">
+      <section className="py-16 lg:py-20 bg-secondary">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+            <h2 className="text-2xl md:text-3xl font-bold text-secondary-foreground mb-4">
               Vamos trabalhar juntos?
             </h2>
-            <p className="text-gray-600 mb-8">
+            <p className="text-secondary-foreground/70 mb-8">
               Entre em contato e descubra como podemos ajudar sua empresa a alcançar novos patamares.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -226,7 +226,7 @@ export default function QuemSomosPage() {
                   <ArrowRight className="w-4 h-4" />
                 </a>
               </Button>
-              <Button asChild variant="outline" size="lg" className="border-2 border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white">
+              <Button asChild variant="outline" size="lg" className="border-secondary-foreground text-secondary-foreground hover:bg-secondary-foreground hover:text-secondary">
                 <Link href="/#servicos">
                   Ver Serviços
                 </Link>

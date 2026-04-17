@@ -173,7 +173,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             <h2 className="text-2xl md:text-3xl font-bold text-secondary-foreground mb-4">
               Pronto para transformar sua indústria?
             </h2>
-            <p className="text-secondary-foreground/80 mb-8">
+            <p className="text-secondary-foreground/70 mb-8">
               Entre em contato conosco e descubra como podemos ajudar sua empresa a alcançar novos patamares.
             </p>
             <Button asChild size="lg" className="gap-2">
@@ -235,7 +235,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               />
               <span className="text-secondary-foreground font-semibold">Viabilizze</span>
             </div>
-            <p className="text-sm text-secondary-foreground/70">
+            <p className="text-sm text-secondary-foreground/60">
               © {new Date().getFullYear()} Viabilizze Assessoria Industrial. Todos os direitos reservados.
             </p>
           </div>
