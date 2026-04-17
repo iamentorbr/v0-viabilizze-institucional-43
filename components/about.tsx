@@ -50,7 +50,10 @@ export function About() {
                 Fundada por uma <strong className="text-secondary-foreground">Engenheira de Bebidas</strong> com mais de 10 anos de experiência no setor, nossa assessoria combina conhecimento técnico aprofundado com visão estratégica de negócios.
               </p>
               <p className="leading-relaxed">
-                Atuamos desde a concepção de produtos até a implementação de sistemas de qualidade, sempre focados em viabilizar os objetivos dos nossos clientes de forma eficiente e em conformidade com as regulamentações vigentes.
+                Atuamos desde a <strong className="text-secondary-foreground">idealização da empresa</strong> até a <strong className="text-secondary-foreground">implementação de gestão de qualidade</strong>, sempre focados em viabilizar os objetivos dos nossos clientes de forma eficiente e em conformidade com as regulamentações vigentes.
+              </p>
+              <p className="leading-relaxed">
+                Nossa sede está localizada em <strong className="text-secondary-foreground">Jaboticabal - SP</strong>, região reconhecida por sua forte tradição no <strong className="text-secondary-foreground">setor agroindustrial</strong>, o que nos permite estar próximos das principais demandas do mercado.
               </p>
             </div>
 
