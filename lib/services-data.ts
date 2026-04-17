@@ -141,12 +141,13 @@ export const services: Service[] = [
     icon: Lightbulb,
     title: "Desenvolvimento de Produtos",
     description: "Do conceito à prateleira, acompanhamos todo o processo de desenvolvimento de novos produtos alimentícios.",
-    features: ["Formulação", "Testes sensoriais", "Scale-up"],
+    features: ["Homologação de Fornecedor", "Formulação", "Testes sensoriais"],
     fullDescription: "O serviço de Desenvolvimento de Produtos da Viabilizze transforma suas ideias em produtos prontos para o mercado. Nossa equipe acompanha todo o ciclo de desenvolvimento, desde a concepção da formulação até o scale-up industrial, garantindo viabilidade técnica, econômica e regulatória.",
     benefits: [
+      "Homologação de Fornecedor",
       "Inovação orientada pelo mercado",
       "Formulações otimizadas",
-      "Redução do time-to-market",
+      "Redução do tempo de Lançamento",
       "Viabilidade técnica e econômica",
       "Suporte completo até o lançamento"
     ],
@@ -154,7 +155,7 @@ export const services: Service[] = [
       { step: "Briefing", description: "Definição do conceito, público-alvo e requisitos do produto" },
       { step: "Formulação", description: "Desenvolvimento e ajustes da receita em escala laboratorial" },
       { step: "Testes Sensoriais", description: "Avaliação de sabor, textura, aparência e aceitação" },
-      { step: "Scale-up", description: "Transição para escala piloto e industrial" },
+      { step: "Homologação de Fornecedor", description: "Qualificação e aprovação de fornecedores para produção" },
       { step: "Lançamento", description: "Suporte técnico para produção comercial" }
     ]
   },
