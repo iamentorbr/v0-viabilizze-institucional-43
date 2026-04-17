@@ -68,7 +68,7 @@ export function Services() {
               </ul>
 
               {/* Link indicator */}
-              <div className="flex items-center gap-1 text-primary text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+              <div className="flex items-center gap-1 text-primary text-sm font-medium transition-all group-hover:gap-2">
                 Saiba mais
                 <ArrowRight className="w-4 h-4" />
               </div>
