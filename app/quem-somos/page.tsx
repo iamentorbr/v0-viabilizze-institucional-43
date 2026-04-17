@@ -105,27 +105,16 @@ export default function QuemSomosPage() {
 
             {/* Visual Side */}
             <div className="space-y-6">
-              {/* Logo Card */}
-              <div className="bg-card rounded-2xl p-8 shadow-lg border border-border">
-                <div className="flex justify-center mb-6">
-                  <Image
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/icone-transparente-kmBsGL4v9zcX6PmVsbtYap3tOnHeve.png"
-                    alt="Viabilizze Logo"
-                    width={120}
-                    height={120}
-                    className="w-24 h-24"
-                  />
-                </div>
-                <div className="text-center">
-                  <Image
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/viabilize-logo-transprnt-METaVIlgFhCWg9emMHHqpIrXOMBJYK.png"
-                    alt="Viabilizze"
-                    width={200}
-                    height={50}
-                    className="h-8 w-auto mx-auto"
-                  />
-                  <p className="text-muted-foreground mt-3 text-sm">Assessoria Industrial</p>
-                </div>
+              {/* Profile Photo */}
+              <div className="rounded-2xl overflow-hidden shadow-lg border border-border">
+                <Image
+                  src="/ana-corp.png"
+                  alt="Fundadora da Viabilizze Assessoria Industrial"
+                  width={600}
+                  height={700}
+                  className="w-full h-auto object-cover"
+                  priority
+                />
               </div>
 
               {/* Highlights */}
