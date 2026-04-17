@@ -101,7 +101,8 @@ export const services: Service[] = [
     benefits: [
       "Conformidade legal garantida",
       "Redução de riscos de penalidades",
-      "Agilidade em processos de licenciamento",
+      "Agilidade em processos de legalização industrial",
+      "Agilidade em processos de legalização de produtos",
       "Atualização constante sobre mudanças regulatórias",
       "Preparação para fiscalizações"
     ],
