@@ -153,9 +153,9 @@ export const services: Service[] = [
     ],
     process: [
       { step: "Briefing", description: "Definição do conceito, público-alvo e requisitos do produto" },
+      { step: "Homologação de Fornecedor", description: "Qualificação e aprovação de fornecedores para produção" },
       { step: "Formulação", description: "Desenvolvimento e ajustes da receita em escala laboratorial" },
       { step: "Testes Sensoriais", description: "Avaliação de sabor, textura, aparência e aceitação" },
-      { step: "Homologação de Fornecedor", description: "Qualificação e aprovação de fornecedores para produção" },
       { step: "Lançamento", description: "Suporte técnico para produção comercial" }
     ]
   },
