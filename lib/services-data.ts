@@ -167,12 +167,12 @@ export const services: Service[] = [
     features: ["Boas Práticas de Fabricação", "APPCC", "ISO 22000", "FSSC 22000", "IFS", "E outras"],
     fullDescription: "Implementamos sistemas de gestão da qualidade e segurança de bebidas reconhecidos internacionalmente. Nossa expertise abrange desde as Boas Práticas de Fabricação obrigatório até certificações como ISO 22000, APPCC e FSSC 22000, preparando sua empresa para atender os mais exigentes requisitos de clientes e mercados.",
     benefits: [
-      "Boas Práticas de Fabricação",
-      "APPCC",
-      "ISO 22000",
-      "FSSC 22000",
-      "IFS",
-      "E outras"
+      "Segurança de bebidas garantida",
+      "Qualidade de Processos",
+      "Acesso a novos mercados e clientes",
+      "Melhoria da gestão operacional",
+      "Reconhecimento internacional",
+      "Redução de riscos e recalls"
     ],
     process: [
       { step: "Diagnóstico Inicial", description: "Avaliação do nível de maturidade atual do sistema" },
