@@ -35,7 +35,8 @@ export const services: Service[] = [
       "Acesso a capacidade produtiva sem investimento em infraestrutura",
       "Garantia de qualidade e conformidade",
       "Flexibilidade para demandas sazonais",
-      "Mitigação de riscos na cadeia de suprimentos"
+      "Mitigação de riscos na cadeia de suprimentos",
+      "Mão de Obra Especializada"
     ],
     process: [
       { step: "Análise de Necessidades", description: "Levantamento detalhado das especificações técnicas e volume de produção" },
