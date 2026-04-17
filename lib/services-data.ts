@@ -164,14 +164,15 @@ export const services: Service[] = [
     icon: Shield,
     title: "Sistema de Qualidade",
     description: "Implementação de sistemas de gestão da qualidade e segurança de bebidas conforme padrões internacionais.",
-    features: ["APPCC", "ISO 22000", "FSSC 22000"],
-    fullDescription: "Implementamos sistemas de gestão da qualidade e segurança de bebidas reconhecidos internacionalmente. Nossa expertise abrange desde o APPCC obrigatório até certificações como ISO 22000 e FSSC 22000, preparando sua empresa para atender os mais exigentes requisitos de clientes e mercados.",
+    features: ["Boas Práticas de Fabricação", "APPCC", "ISO 22000", "FSSC 22000", "IFS", "E outras"],
+    fullDescription: "Implementamos sistemas de gestão da qualidade e segurança de bebidas reconhecidos internacionalmente. Nossa expertise abrange desde as Boas Práticas de Fabricação obrigatório até certificações como ISO 22000, APPCC e FSSC 22000, preparando sua empresa para atender os mais exigentes requisitos de clientes e mercados.",
     benefits: [
-      "Segurança alimentar garantida",
-      "Acesso a novos mercados e clientes",
-      "Melhoria da gestão operacional",
-      "Reconhecimento internacional",
-      "Redução de riscos e recalls"
+      "Boas Práticas de Fabricação",
+      "APPCC",
+      "ISO 22000",
+      "FSSC 22000",
+      "IFS",
+      "E outras"
     ],
     process: [
       { step: "Diagnóstico Inicial", description: "Avaliação do nível de maturidade atual do sistema" },
