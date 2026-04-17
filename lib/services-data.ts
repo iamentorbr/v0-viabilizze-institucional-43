@@ -29,7 +29,7 @@ export const services: Service[] = [
     title: "Assessoria para Terceirização",
     description: "Suporte completo na busca e qualificação de parceiros para terceirização de produção, garantindo qualidade e conformidade em toda a cadeia produtiva.",
     features: ["Qualificação de fornecedores", "Auditorias técnicas", "Gestão de contratos"],
-    fullDescription: "Nossa assessoria para terceirização oferece suporte estratégico completo para empresas que buscam parceiros confiáveis para produção. Realizamos todo o processo de prospecção, qualificação e acompanhamento de fornecedores, garantindo que sua marca mantenha os padrões de qualidade e conformidade regulatória mesmo em produções terceirizadas.",
+    fullDescription: "Nossa assessoria para terceirização oferece suporte estratégico completo para empresas que buscam parceiros confiáveis para produção. Atuamos na Gestão de Produção, Gestão de Estoque e Acompanhamento de Processo, realizando todo o ciclo de prospecção, qualificação e monitoramento de fornecedores, garantindo que sua marca mantenha os padrões de qualidade e conformidade regulatória mesmo em produções terceirizadas.",
     benefits: [
       "Redução de custos operacionais",
       "Acesso a capacidade produtiva sem investimento em infraestrutura",
