@@ -45,7 +45,11 @@ export function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                className={
+                  item.href === "/viabilizze-digital"
+                    ? "text-sm font-semibold text-primary hover:text-primary/80 transition-colors"
+                    : "text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                }
               >
                 {item.label}
               </Link>
@@ -77,7 +81,11 @@ export function Header() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="text-base font-medium text-muted-foreground hover:text-foreground transition-colors"
+                  className={
+                    item.href === "/viabilizze-digital"
+                      ? "text-base font-semibold text-primary hover:text-primary/80 transition-colors"
+                      : "text-base font-medium text-muted-foreground hover:text-foreground transition-colors"
+                  }
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.label}
