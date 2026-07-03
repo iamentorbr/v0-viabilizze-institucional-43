@@ -3,7 +3,7 @@ import Link from "next/link"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
-import { Calculator, ArrowRight, Sparkles, Zap, ShieldCheck, Clock } from "lucide-react"
+import { Calculator, ArrowRight, Sparkles, Zap, ShieldCheck, Clock, FileText } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "Viabilizze Digital | Produtos Digitais para a Indústria de Bebidas",
@@ -22,6 +22,17 @@ const produtos = [
       "Calcule o percentual de polpa e a quantidade de suco concentrado da sua formulação com validação automática da legislação MAPA (IN 49/2018) para Refresco, Suco Integral e Néctar.",
     features: ["Cálculo por Brix", "Validação MAPA", "13 frutas cadastradas", "Acesso web multiplataforma"],
     preco: "A partir de R$ 249,00/mês",
+  },
+  {
+    slug: "orcamento-viabilidade",
+    icon: FileText,
+    badge: "Disponível",
+    disponivel: true,
+    title: "Orçamento de Desenvolvimento de Produto (Viabilidade de Projeto)",
+    description:
+      "Responda um questionário sobre o seu produto e gere um Relatório de Viabilidade personalizado, com análise de investimento, posicionamento de qualidade, público-alvo e concorrência.",
+    features: ["Questionário guiado", "Relatório personalizado", "Análise de mercado", "Acesso à assessoria"],
+    preco: "Relatório completo por R$ 197,00",
   },
 ]
 
