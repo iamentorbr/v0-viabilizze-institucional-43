@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button"
 const navItems = [
   { label: "Home", href: "/" },
   { label: "Serviços", href: "/#servicos" },
+  { label: "Viabilizze Digital", href: "/viabilizze-digital" },
   { label: "Quem Somos", href: "/quem-somos" },
   { label: "Contato", href: "/contato" },
 ]
