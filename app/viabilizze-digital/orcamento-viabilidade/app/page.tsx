@@ -273,8 +273,27 @@ export default function OrcamentoViabilidadeApp() {
 
   const gerarPDFCompleto = useCallback((modoDemo = false) => {
     const html = gerarHTMLRelatorio(lead, scores, scoreFinal, nivel, respostas, modoDemo)
-    const w = window.open('', '_blank', 'width=900,height=700')
-    if (w) { w.document.write(html); w.document.close(); w.focus() }
+    // Gera o relatório 100% no navegador (sem chamada de rede) usando um Blob.
+    // Isso evita o "Erro de conexão" e é resistente a bloqueadores de pop-up.
+    try {
+      const blob = new Blob([html], { type: 'text/html;charset=utf-8' })
+      const url  = URL.createObjectURL(blob)
+      const w    = window.open(url, '_blank')
+      if (!w) {
+        // Pop-up bloqueado → força o download do arquivo HTML do relatório
+        const a = document.createElement('a')
+        a.href = url
+        a.download = `relatorio-viabilidade${modoDemo ? '-demo' : ''}.html`
+        document.body.appendChild(a)
+        a.click()
+        document.body.removeChild(a)
+      }
+      setTimeout(() => URL.revokeObjectURL(url), 60000)
+    } catch {
+      // Fallback final: escreve direto em uma nova janela
+      const w = window.open('', '_blank', 'width=900,height=700')
+      if (w) { w.document.write(html); w.document.close(); w.focus() }
+    }
   }, [lead, scores, scoreFinal, nivel, respostas])
 
   async function iniciarPagamento() {
