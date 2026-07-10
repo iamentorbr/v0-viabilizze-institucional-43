@@ -215,6 +215,7 @@ export default function OrcamentoViabilidadeApp() {
   const [lead, setLead]           = useState({ nome: '', email: '', empresa: '', setor: '' })
   const [pagando, setPagando]     = useState(false)
   const [pago, setPago]           = useState(false)
+  const [demo, setDemo]           = useState(false)
 
   const areaAtual     = AREAS[areaIdx]
   const pergsArea     = PERGUNTAS.filter(p => p.area === areaAtual?.id)
@@ -234,6 +235,10 @@ export default function OrcamentoViabilidadeApp() {
       const v = params.get(k) ?? (params.get('status') === k ? k : null)
       return v === '1' || v === 'true' || v === 'sucesso'
     }) || params.get('status') === 'sucesso' || params.get('status') === 'success'
+
+    // Modo DEMO: libera a geração do relatório sem pagamento (marcado como demonstração)
+    const flagDemo = ['1', 'true', 'sim'].includes((params.get('demo') ?? '').toLowerCase())
+    if (flagDemo) setDemo(true)
 
     const salvo = localStorage.getItem(STORE_KEY)
     if (salvo) {
@@ -266,10 +271,29 @@ export default function OrcamentoViabilidadeApp() {
     }
   }
 
-  const gerarPDFCompleto = useCallback(() => {
-    const html = gerarHTMLRelatorio(lead, scores, scoreFinal, nivel, respostas)
-    const w = window.open('', '_blank', 'width=900,height=700')
-    if (w) { w.document.write(html); w.document.close(); w.focus() }
+  const gerarPDFCompleto = useCallback((modoDemo = false) => {
+    const html = gerarHTMLRelatorio(lead, scores, scoreFinal, nivel, respostas, modoDemo)
+    // Gera o relatório 100% no navegador (sem chamada de rede) usando um Blob.
+    // Isso evita o "Erro de conexão" e é resistente a bloqueadores de pop-up.
+    try {
+      const blob = new Blob([html], { type: 'text/html;charset=utf-8' })
+      const url  = URL.createObjectURL(blob)
+      const w    = window.open(url, '_blank')
+      if (!w) {
+        // Pop-up bloqueado → força o download do arquivo HTML do relatório
+        const a = document.createElement('a')
+        a.href = url
+        a.download = `relatorio-viabilidade${modoDemo ? '-demo' : ''}.html`
+        document.body.appendChild(a)
+        a.click()
+        document.body.removeChild(a)
+      }
+      setTimeout(() => URL.revokeObjectURL(url), 60000)
+    } catch {
+      // Fallback final: escreve direto em uma nova janela
+      const w = window.open('', '_blank', 'width=900,height=700')
+      if (w) { w.document.write(html); w.document.close(); w.focus() }
+    }
   }, [lead, scores, scoreFinal, nivel, respostas])
 
   async function iniciarPagamento() {
@@ -615,6 +639,21 @@ export default function OrcamentoViabilidadeApp() {
                     style={{ ...S.btnPrimary, background: pagando ? '#ccc' : 'linear-gradient(135deg,#F97316,#ea6a00)' }}>
                     {pagando ? <><Loader2 size={16} style={{ animation: 'spin 1s linear infinite' }} /> Aguarde...</> : <><FileText size={16} /> Desbloquear PDF por R$ 197</>}
                   </button>
+
+                  {/* Acesso DEMO — gera o relatório sem pagamento (marca d'água de demonstração) */}
+                  <button onClick={() => gerarPDFCompleto(true)}
+                    style={{
+                      width: '100%', marginTop: 10, padding: '10px 16px', borderRadius: 10,
+                      border: `1px dashed ${demo ? '#F97316' : '#c4c7cc'}`,
+                      background: demo ? '#fff3e0' : '#fafafa', cursor: 'pointer',
+                      display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8,
+                      fontSize: 12, fontWeight: 700, color: demo ? '#e65100' : '#5f6368',
+                    }}>
+                    <FileText size={14} /> Gerar relatório DEMO (sem pagamento)
+                  </button>
+                  <p style={{ fontSize: 10, color: '#9aa0a6', textAlign: 'center', margin: '6px 0 0' }}>
+                    Versão de demonstração com marca d&apos;água — para avaliação do produto
+                  </p>
                 </div>
               </div>
             )}
@@ -662,9 +701,16 @@ export default function OrcamentoViabilidadeApp() {
 // ═══════════════════════════════════════════════════════════════════════════
 function gerarHTMLRelatorio(
   lead: any, scores: any, scoreFinal: number,
-  nivel: any, respostas: Record<string, number>
+  nivel: any, respostas: Record<string, number>, demo = false
 ) {
   const data = new Date().toLocaleDateString('pt-BR', { day: '2-digit', month: 'long', year: 'numeric' })
+  const marcaDagua = demo ? `
+    <div style="position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:9999;overflow:hidden;">
+      <div style="position:absolute;top:45%;left:50%;transform:translate(-50%,-50%) rotate(-30deg);font-size:90px;font-weight:900;color:rgba(249,115,22,.10);white-space:nowrap;">DEMONSTRAÇÃO</div>
+    </div>
+    <div class="no-print" style="background:#fff3e0;border:1px solid #ffcc80;border-radius:10px;padding:12px 16px;margin-bottom:20px;text-align:center;">
+      <p style="font-size:12px;font-weight:700;color:#e65100;margin:0;">Versão DEMO — relatório de demonstração sem valor comercial. Para o relatório executivo completo, adquira a versão oficial por R$ 197.</p>
+    </div>` : ''
   const linhasAreas = AREAS.map(area => {
     const sc = scores[area.id]
     const cor = sc.pct >= 70 ? '#2e7d32' : sc.pct >= 45 ? '#F97316' : '#c62828'
@@ -692,6 +738,7 @@ function gerarHTMLRelatorio(
   h2 { font-size:15px;font-weight:700;color:#1a1d23;margin:24px 0 12px;padding-bottom:4px;border-bottom:2px solid #F97316; }
 </style>
 </head><body>
+${marcaDagua}
 <button class="no-print btn" onclick="window.print()">🖨️ Imprimir / Salvar PDF</button>
 
 <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:24px;padding-bottom:16px;border-bottom:3px solid #F97316;">
