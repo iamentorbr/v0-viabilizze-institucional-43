@@ -9,13 +9,13 @@ import {
 const PRECO_MENSAL = 249.00
 
 export default function PaginaCalculadora() {
-  const [plano, setPlano]   = useState<'SEMESTRAL' | 'ANUAL'>('ANUAL')
+  const [plano, setPlano]   = useState<'MENSAL' | 'SEMESTRAL' | 'ANUAL'>('ANUAL')
   const [email, setEmail]   = useState('')
   const [nome, setNome]     = useState('')
   const [carregando, setCarregando] = useState(false)
   const [erro, setErro]     = useState('')
 
-  const meses      = plano === 'ANUAL' ? 12 : 6
+  const meses      = plano === 'ANUAL' ? 12 : plano === 'SEMESTRAL' ? 6 : 1
   const valorTotal = PRECO_MENSAL * meses
 
   async function comprar() {
@@ -117,8 +117,9 @@ export default function PaginaCalculadora() {
           </p>
 
           {/* Seletor de plano */}
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12, marginBottom: 20 }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 12, marginBottom: 20 }}>
             {([
+              { id: 'MENSAL'   as const, label: 'Mensal',    meses: 1,  destaque: false },
               { id: 'SEMESTRAL' as const, label: 'Semestral', meses: 6, destaque: false },
               { id: 'ANUAL'    as const, label: 'Anual',     meses: 12, destaque: true  },
             ]).map(p => (
@@ -194,7 +195,8 @@ export default function PaginaCalculadora() {
               </p>
             </div>
             <p style={{ fontSize: 11, color: '#9aa0a6', textAlign: 'right', margin: 0 }}>
-              Plano {plano === 'ANUAL' ? 'Anual' : 'Semestral'}<br />{meses} meses de acesso
+              Plano {plano === 'ANUAL' ? 'Anual' : plano === 'SEMESTRAL' ? 'Semestral' : 'Mensal'}<br />
+              {meses === 1 ? '1 mês' : `${meses} meses`} de acesso
             </p>
           </div>
 
