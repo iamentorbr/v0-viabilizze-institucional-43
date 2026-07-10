@@ -46,6 +46,16 @@ function calcular(fruta: Fruta, tipo: Tipo, brixConc: number, brixLeg: number, v
 const TOKEN_KEY = 'vd_calc_token'
 const API = 'https://viabilizzecrm.vercel.app/api'
 
+// ─── ACESSO DEMO (LOCAL) ───────────────────────────────────────────────────────
+// Credenciais de acesso direto, sem depender do CRM externo.
+const DEMO_EMAIL = 'admin@viabilizze.com.br'
+const DEMO_SENHA = 'viabilizze2025'
+const DEMO_TOKEN = 'demo-local-access'
+const DEMO_SESSAO = {
+  usuario: { nome: 'Administrador VIABILIZZE', email: DEMO_EMAIL },
+  assinatura: { plano: 'ANUAL', dataExpiracao: '2099-12-31T00:00:00.000Z' },
+}
+
 // ─── TELA DE LOGIN ────────────────────────────────────────────────────────────
 function Login({ onLogin }: { onLogin: (d: any) => void }) {
   const [email, setEmail]     = useState('')
@@ -57,6 +67,15 @@ function Login({ onLogin }: { onLogin: (d: any) => void }) {
   async function entrar() {
     if (!email || !senha) { setErro('Preencha e-mail e senha.'); return }
     setLoading(true); setErro('')
+
+    // Acesso demo local (não usa o CRM externo)
+    if (email.trim().toLowerCase() === DEMO_EMAIL && senha === DEMO_SENHA) {
+      localStorage.setItem(TOKEN_KEY, DEMO_TOKEN)
+      onLogin(DEMO_SESSAO)
+      setLoading(false)
+      return
+    }
+
     try {
       const res  = await fetch(`${API}/auth/login`, {
         method: 'POST',
@@ -308,6 +327,7 @@ export default function AppCalculadora() {
   useEffect(() => {
     const token = localStorage.getItem(TOKEN_KEY)
     if (!token) { setVerif(false); return }
+    if (token === DEMO_TOKEN) { setSessao(DEMO_SESSAO); setVerif(false); return }
     fetch(`${API}/auth/verificar`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -321,10 +341,10 @@ export default function AppCalculadora() {
 
   async function handleLogout() {
     const token = localStorage.getItem(TOKEN_KEY)
-    if (token) {
+    if (token && token !== DEMO_TOKEN) {
       await fetch(`${API}/auth/logout`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ token }) })
-      localStorage.removeItem(TOKEN_KEY)
     }
+    localStorage.removeItem(TOKEN_KEY)
     setSessao(null)
   }
 
