@@ -29,14 +29,13 @@ export const services: Service[] = [
     title: "Assessoria para Terceirização",
     description: "Suporte completo na busca e qualificação de parceiros para terceirização de produção, garantindo qualidade e conformidade em toda a cadeia produtiva.",
     features: ["Qualificação de fornecedores", "Auditorias técnicas", "Gestão de contratos"],
-    fullDescription: "Nossa assessoria para terceirização oferece suporte estratégico completo para empresas que buscam parceiros confiáveis para produção. Atuamos na Gestão de Produção, Gestão de Estoque e Acompanhamento de Processo, realizando todo o ciclo de prospecção, qualificação e monitoramento de fornecedores, garantindo que sua marca mantenha os padrões de qualidade e conformidade regulatória mesmo em produções terceirizadas.",
+    fullDescription: "Nossa assessoria para terceirização oferece suporte estratégico completo para empresas que buscam parceiros confiáveis para produção. Realizamos todo o processo de prospecção, qualificação e acompanhamento de fornecedores, garantindo que sua marca mantenha os padrões de qualidade e conformidade regulatória mesmo em produções terceirizadas.",
     benefits: [
       "Redução de custos operacionais",
       "Acesso a capacidade produtiva sem investimento em infraestrutura",
       "Garantia de qualidade e conformidade",
       "Flexibilidade para demandas sazonais",
-      "Mitigação de riscos na cadeia de suprimentos",
-      "Mão de Obra Especializada"
+      "Mitigação de riscos na cadeia de suprimentos"
     ],
     process: [
       { step: "Análise de Necessidades", description: "Levantamento detalhado das especificações técnicas e volume de produção" },
@@ -58,7 +57,6 @@ export const services: Service[] = [
       "Soluções customizadas para sua realidade",
       "Aumento da eficiência operacional",
       "Redução de perdas e desperdícios",
-      "Metodologia Exclusiva para Mitigação de Problemas",
       "Suporte técnico contínuo"
     ],
     process: [
@@ -101,8 +99,7 @@ export const services: Service[] = [
     benefits: [
       "Conformidade legal garantida",
       "Redução de riscos de penalidades",
-      "Agilidade em processos de legalização industrial",
-      "Agilidade em processos de legalização de produtos",
+      "Agilidade em processos de licenciamento",
       "Atualização constante sobre mudanças regulatórias",
       "Preparação para fiscalizações"
     ],
@@ -141,21 +138,20 @@ export const services: Service[] = [
     icon: Lightbulb,
     title: "Desenvolvimento de Produtos",
     description: "Do conceito à prateleira, acompanhamos todo o processo de desenvolvimento de novos produtos alimentícios.",
-    features: ["Homologação de Fornecedor", "Formulação", "Testes sensoriais"],
+    features: ["Formulação", "Testes sensoriais", "Scale-up"],
     fullDescription: "O serviço de Desenvolvimento de Produtos da Viabilizze transforma suas ideias em produtos prontos para o mercado. Nossa equipe acompanha todo o ciclo de desenvolvimento, desde a concepção da formulação até o scale-up industrial, garantindo viabilidade técnica, econômica e regulatória.",
     benefits: [
-      "Homologação de Fornecedor",
       "Inovação orientada pelo mercado",
       "Formulações otimizadas",
-      "Redução do tempo de Lançamento",
+      "Redução do time-to-market",
       "Viabilidade técnica e econômica",
       "Suporte completo até o lançamento"
     ],
     process: [
       { step: "Briefing", description: "Definição do conceito, público-alvo e requisitos do produto" },
-      { step: "Homologação de Fornecedor", description: "Qualificação e aprovação de fornecedores para produção" },
       { step: "Formulação", description: "Desenvolvimento e ajustes da receita em escala laboratorial" },
       { step: "Testes Sensoriais", description: "Avaliação de sabor, textura, aparência e aceitação" },
+      { step: "Scale-up", description: "Transição para escala piloto e industrial" },
       { step: "Lançamento", description: "Suporte técnico para produção comercial" }
     ]
   },
@@ -164,11 +160,10 @@ export const services: Service[] = [
     icon: Shield,
     title: "Sistema de Qualidade",
     description: "Implementação de sistemas de gestão da qualidade e segurança de bebidas conforme padrões internacionais.",
-    features: ["Boas Práticas de Fabricação", "APPCC", "ISO 22000", "FSSC 22000", "IFS", "E outras"],
-    fullDescription: "Implementamos sistemas de gestão da qualidade e segurança de bebidas reconhecidos internacionalmente. Nossa expertise abrange desde as Boas Práticas de Fabricação obrigatório até certificações como ISO 22000, APPCC e FSSC 22000, preparando sua empresa para atender os mais exigentes requisitos de clientes e mercados.",
+    features: ["APPCC", "ISO 22000", "FSSC 22000"],
+    fullDescription: "Implementamos sistemas de gestão da qualidade e segurança de bebidas reconhecidos internacionalmente. Nossa expertise abrange desde o APPCC obrigatório até certificações como ISO 22000 e FSSC 22000, preparando sua empresa para atender os mais exigentes requisitos de clientes e mercados.",
     benefits: [
-      "Segurança de bebidas garantida",
-      "Qualidade de Processos",
+      "Segurança alimentar garantida",
       "Acesso a novos mercados e clientes",
       "Melhoria da gestão operacional",
       "Reconhecimento internacional",
@@ -187,8 +182,8 @@ export const services: Service[] = [
     icon: GraduationCap,
     title: "Treinamentos",
     description: "Capacitação de equipes em boas práticas de fabricação, segurança de bebidas e processos produtivos.",
-    features: ["Boas Práticas", "BPF", "APPCC", "Treinamento de ISO", "Treinamento de Sensorial", "Entre outros"],
-    fullDescription: "Nossos treinamentos são desenvolvidos para capacitar equipes em todos os níveis. Utilizamos metodologias práticas e interativas, adaptadas à realidade da sua empresa, garantindo a efetiva absorção do conhecimento e mudança de comportamento.",
+    features: ["BPF", "Manipuladores", "Liderança técnica"],
+    fullDescription: "Nossos treinamentos são desenvolvidos para capacitar equipes em todos os níveis, desde manipuladores de bebidas até lideranças técnicas. Utilizamos metodologias práticas e interativas, adaptadas à realidade da sua empresa, garantindo a efetiva absorção do conhecimento e mudança de comportamento.",
     benefits: [
       "Equipes mais qualificadas",
       "Redução de erros operacionais",

@@ -95,7 +95,7 @@ export default function QuemSomosPage() {
                   Fundada por uma <strong className="text-secondary-foreground font-bold">Engenheira de Bebidas</strong> com mais de <strong className="text-secondary-foreground font-bold">10 anos de experiência</strong> no setor, nossa assessoria combina <strong className="text-secondary-foreground font-bold">conhecimento técnico aprofundado</strong> com <strong className="text-secondary-foreground font-bold">visão estratégica de negócios</strong>.
                 </p>
                 <p className="leading-relaxed">
-                  Atuamos desde a <strong className="text-secondary-foreground font-bold">idealização da empresa</strong> até a <strong className="text-secondary-foreground font-bold">implementação de gestão de qualidade</strong>, sempre focados em viabilizar os objetivos dos nossos clientes de forma eficiente e em conformidade com as <strong className="text-secondary-foreground font-bold">regulamentações vigentes</strong>.
+                  Atuamos desde a <strong className="text-secondary-foreground font-bold">concepção de produtos</strong> até a <strong className="text-secondary-foreground font-bold">implementação de sistemas de qualidade</strong>, sempre focados em viabilizar os objetivos dos nossos clientes de forma eficiente e em conformidade com as <strong className="text-secondary-foreground font-bold">regulamentações vigentes</strong>.
                 </p>
                 <p className="leading-relaxed">
                   Nossa sede está localizada em <strong className="text-secondary-foreground font-bold">Jaboticabal - SP</strong>, região reconhecida por sua forte tradição no <strong className="text-secondary-foreground font-bold">setor agroindustrial</strong>, o que nos permite estar próximos das principais demandas do mercado.
@@ -105,16 +105,27 @@ export default function QuemSomosPage() {
 
             {/* Visual Side */}
             <div className="space-y-6">
-              {/* Profile Photo */}
-              <div className="rounded-2xl overflow-hidden shadow-lg border border-border">
-                <Image
-                  src="/ana-corp.png"
-                  alt="Fundadora da Viabilizze Assessoria Industrial"
-                  width={600}
-                  height={700}
-                  className="w-full h-auto object-cover"
-                  priority
-                />
+              {/* Logo Card */}
+              <div className="bg-card rounded-2xl p-8 shadow-lg border border-border">
+                <div className="flex justify-center mb-6">
+                  <Image
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/icone-transparente-kmBsGL4v9zcX6PmVsbtYap3tOnHeve.png"
+                    alt="Viabilizze Logo"
+                    width={120}
+                    height={120}
+                    className="w-24 h-24"
+                  />
+                </div>
+                <div className="text-center">
+                  <Image
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/viabilize-logo-transprnt-METaVIlgFhCWg9emMHHqpIrXOMBJYK.png"
+                    alt="Viabilizze"
+                    width={200}
+                    height={50}
+                    className="h-8 w-auto mx-auto"
+                  />
+                  <p className="text-muted-foreground mt-3 text-sm">Assessoria Industrial</p>
+                </div>
               </div>
 
               {/* Highlights */}
@@ -172,7 +183,7 @@ export default function QuemSomosPage() {
             <h2 className="text-2xl md:text-3xl font-bold text-secondary-foreground mb-4">
               Nossa Expertise
             </h2>
-            <p className="text-secondary-foreground/70">
+            <p className="text-muted-foreground">
               Áreas em que nos destacamos para entregar os melhores resultados
             </p>
           </div>
@@ -195,13 +206,13 @@ export default function QuemSomosPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 lg:py-20 bg-secondary">
+      <section className="py-16 lg:py-20 bg-gray-100">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-2xl md:text-3xl font-bold text-secondary-foreground mb-4">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
               Vamos trabalhar juntos?
             </h2>
-            <p className="text-secondary-foreground/70 mb-8">
+            <p className="text-gray-600 mb-8">
               Entre em contato e descubra como podemos ajudar sua empresa a alcançar novos patamares.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -215,7 +226,7 @@ export default function QuemSomosPage() {
                   <ArrowRight className="w-4 h-4" />
                 </a>
               </Button>
-              <Button asChild variant="outline" size="lg" className="border-secondary-foreground text-secondary-foreground hover:bg-secondary-foreground hover:text-secondary">
+              <Button asChild variant="outline" size="lg" className="border-2 border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white">
                 <Link href="/#servicos">
                   Ver Serviços
                 </Link>

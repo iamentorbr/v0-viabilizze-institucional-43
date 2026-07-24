@@ -42,7 +42,7 @@ export function About() {
               Expertise que <span className="text-primary">transforma</span> negócios
             </h2>
             
-            <div className="space-y-6 text-secondary-foreground/80">
+            <div className="space-y-6 text-muted-foreground">
               <p className="text-lg leading-relaxed">
                 A <strong className="text-secondary-foreground">Viabilizze Assessoria Industrial</strong> nasceu da paixão pela indústria de bebidas e do desejo de transformar desafios em oportunidades de crescimento.
               </p>
@@ -50,10 +50,7 @@ export function About() {
                 Fundada por uma <strong className="text-secondary-foreground">Engenheira de Bebidas</strong> com mais de 10 anos de experiência no setor, nossa assessoria combina conhecimento técnico aprofundado com visão estratégica de negócios.
               </p>
               <p className="leading-relaxed">
-                Atuamos desde a <strong className="text-secondary-foreground">idealização da empresa</strong> até a <strong className="text-secondary-foreground">implementação de gestão de qualidade</strong>, sempre focados em viabilizar os objetivos dos nossos clientes de forma eficiente e em conformidade com as regulamentações vigentes.
-              </p>
-              <p className="leading-relaxed">
-                Nossa sede está localizada em <strong className="text-secondary-foreground">Jaboticabal - SP</strong>, região reconhecida por sua forte tradição no <strong className="text-secondary-foreground">setor agroindustrial</strong>, o que nos permite estar próximos das principais demandas do mercado.
+                Atuamos desde a concepção de produtos até a implementação de sistemas de qualidade, sempre focados em viabilizar os objetivos dos nossos clientes de forma eficiente e em conformidade com as regulamentações vigentes.
               </p>
             </div>
 
@@ -64,7 +61,7 @@ export function About() {
                 {values.map((value) => (
                   <div key={value} className="flex items-center gap-2">
                     <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" />
-                    <span className="text-sm text-secondary-foreground/80">{value}</span>
+                    <span className="text-sm text-muted-foreground">{value}</span>
                   </div>
                 ))}
               </div>
