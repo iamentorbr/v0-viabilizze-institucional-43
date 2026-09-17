@@ -8,6 +8,7 @@ import {
   ClipboardCheck,
   Handshake,
   Briefcase,
+  ChartNoAxesCombined,
   LucideIcon
 } from "lucide-react"
 
@@ -23,6 +24,29 @@ export interface Service {
 }
 
 export const services: Service[] = [
+  {
+    slug: "assessoria-industrial",
+    icon: Briefcase,
+    title: "Assessoria Industrial",
+    description: "Consultoria abrangente para resolver desafios técnicos e operacionais da sua indústria, com soluções personalizadas para cada necessidade.",
+    features: ["Diagnóstico operacional", "Planos de ação", "Acompanhamento contínuo"],
+    fullDescription: "A Assessoria Industrial da Viabilizze oferece suporte técnico especializado para indústrias de bebidas de todos os portes. Nossa equipe atua como uma extensão do seu time, identificando oportunidades de melhoria, resolvendo problemas técnicos e implementando soluções que aumentam a eficiência e competitividade do seu negócio.",
+    benefits: [
+      "Acesso a expertise técnica especializada",
+      "Soluções customizadas para sua realidade",
+      "Aumento da eficiência operacional",
+      "Redução de perdas e desperdícios",
+      "Metodologia Exclusiva para Mitigação de Problemas",
+      "Suporte técnico contínuo"
+    ],
+    process: [
+      { step: "Diagnóstico Inicial", description: "Avaliação completa da situação atual da empresa" },
+      { step: "Identificação de Oportunidades", description: "Mapeamento de pontos de melhoria e priorização" },
+      { step: "Plano de Ação", description: "Elaboração de estratégias e cronograma de implementação" },
+      { step: "Implementação", description: "Execução das melhorias com acompanhamento técnico" },
+      { step: "Monitoramento", description: "Avaliação de resultados e ajustes necessários" }
+    ]
+  },
   {
     slug: "assessoria-terceirizacao",
     icon: Handshake,
@@ -47,26 +71,26 @@ export const services: Service[] = [
     ]
   },
   {
-    slug: "assessoria-industrial",
-    icon: Briefcase,
-    title: "Assessoria Industrial",
-    description: "Consultoria abrangente para resolver desafios técnicos e operacionais da sua indústria, com soluções personalizadas para cada necessidade.",
-    features: ["Diagnóstico operacional", "Planos de ação", "Acompanhamento contínuo"],
-    fullDescription: "A Assessoria Industrial da Viabilizze oferece suporte técnico especializado para indústrias de bebidas de todos os portes. Nossa equipe atua como uma extensão do seu time, identificando oportunidades de melhoria, resolvendo problemas técnicos e implementando soluções que aumentam a eficiência e competitividade do seu negócio.",
+    slug: "viabilidade-de-negocio",
+    icon: ChartNoAxesCombined,
+    title: "Viabilidade de Negócio",
+    description: "Análise estratégica para validar oportunidades, reduzir riscos e orientar decisões de crescimento e investimento.",
+    features: ["Análise de mercado", "Cenários financeiros", "Plano de implementação"],
+    fullDescription: "A Viabilidade de Negócio da Viabilizze avalia se uma oportunidade pode se transformar em um negócio sustentável e rentável. Estudamos novos empreendimentos, expansão de operações, lançamento de produtos e investimentos, conectando mercado, operação e finanças para apoiar uma decisão segura.",
     benefits: [
-      "Acesso a expertise técnica especializada",
-      "Soluções customizadas para sua realidade",
-      "Aumento da eficiência operacional",
-      "Redução de perdas e desperdícios",
-      "Metodologia Exclusiva para Mitigação de Problemas",
-      "Suporte técnico contínuo"
+      "Decisões baseadas em dados e cenários",
+      "Redução de riscos antes do investimento",
+      "Clareza sobre mercado e posicionamento",
+      "Avaliação de custos, receitas e retorno",
+      "Identificação de riscos e oportunidades",
+      "Plano claro para os próximos passos"
     ],
     process: [
-      { step: "Diagnóstico Inicial", description: "Avaliação completa da situação atual da empresa" },
-      { step: "Identificação de Oportunidades", description: "Mapeamento de pontos de melhoria e priorização" },
-      { step: "Plano de Ação", description: "Elaboração de estratégias e cronograma de implementação" },
-      { step: "Implementação", description: "Execução das melhorias com acompanhamento técnico" },
-      { step: "Monitoramento", description: "Avaliação de resultados e ajustes necessários" }
+      { step: "Entendimento da Oportunidade", description: "Levantamento dos objetivos, premissas, escopo e expectativas do negócio" },
+      { step: "Análise de Mercado", description: "Avaliação de demanda, concorrência, público e posicionamento da oportunidade" },
+      { step: "Estudo Operacional", description: "Definição de estrutura, recursos, processos e capacidade necessários" },
+      { step: "Modelagem Econômico-Financeira", description: "Estimativa de investimentos, custos, receitas, cenários e indicadores de retorno" },
+      { step: "Recomendação Estratégica", description: "Entrega de relatório conclusivo com riscos, oportunidades e plano de implementação" }
     ]
   },
   {
