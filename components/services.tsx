@@ -55,8 +55,8 @@ export function Services() {
                   {service.title}
                 </h3>
                 {service.slug === "assessoria-industrial" && (
-                  <span className="shrink-0 rounded-full bg-primary/10 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-primary">
-                    Estratégico
+                  <span className="shrink-0 rounded-full bg-primary px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-primary-foreground">
+                    Destaque
                   </span>
                 )}
               </div>
@@ -67,10 +67,10 @@ export function Services() {
               {service.slug === "assessoria-industrial" && (
                 <div className="mb-4 rounded-lg border border-primary/25 bg-primary/5 p-3">
                   <p className="text-xs font-semibold uppercase tracking-wide text-primary mb-1">
-                    Inclui Estudo de Viabilidade
+                    Assessoria para sua indústria
                   </p>
                   <p className="text-sm leading-relaxed text-card-foreground">
-                    Para novas plantas, novos produtos e decisões de investimento.
+                    Diagnóstico, estratégia e acompanhamento para decisões mais eficientes.
                   </p>
                   <span className="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-primary">
                     Conheça esta solução <ArrowRight className="h-3 w-3" />

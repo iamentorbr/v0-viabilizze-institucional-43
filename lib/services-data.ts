@@ -25,29 +25,6 @@ export interface Service {
 
 export const services: Service[] = [
   {
-    slug: "assessoria-terceirizacao",
-    icon: Handshake,
-    title: "Assessoria para Terceirização",
-    description: "Suporte completo na busca e qualificação de parceiros para terceirização de produção, garantindo qualidade e conformidade em toda a cadeia produtiva.",
-    features: ["Qualificação de fornecedores", "Auditorias técnicas", "Gestão de contratos"],
-    fullDescription: "Nossa assessoria para terceirização oferece suporte estratégico completo para empresas que buscam parceiros confiáveis para produção. Atuamos na Gestão de Produção, Gestão de Estoque e Acompanhamento de Processo, realizando todo o ciclo de prospecção, qualificação e monitoramento de fornecedores, garantindo que sua marca mantenha os padrões de qualidade e conformidade regulatória mesmo em produções terceirizadas.",
-    benefits: [
-      "Redução de custos operacionais",
-      "Acesso a capacidade produtiva sem investimento em infraestrutura",
-      "Garantia de qualidade e conformidade",
-      "Flexibilidade para demandas sazonais",
-      "Mitigação de riscos na cadeia de suprimentos",
-      "Mão de Obra Especializada"
-    ],
-    process: [
-      { step: "Análise de Necessidades", description: "Levantamento detalhado das especificações técnicas e volume de produção" },
-      { step: "Prospecção de Parceiros", description: "Identificação e pré-qualificação de potenciais fornecedores" },
-      { step: "Auditoria Técnica", description: "Avaliação in loco das instalações e processos dos candidatos" },
-      { step: "Negociação e Contratos", description: "Suporte na elaboração de contratos e acordos de qualidade" },
-      { step: "Acompanhamento Contínuo", description: "Monitoramento da qualidade e desempenho do parceiro" }
-    ]
-  },
-  {
     slug: "assessoria-industrial",
     icon: Briefcase,
     title: "Assessoria Industrial",
@@ -71,24 +48,47 @@ export const services: Service[] = [
     ]
   },
   {
-    slug: "estudo-de-viabilidade",
+    slug: "assessoria-terceirizacao",
+    icon: Handshake,
+    title: "Assessoria para Terceirização",
+    description: "Suporte completo na busca e qualificação de parceiros para terceirização de produção, garantindo qualidade e conformidade em toda a cadeia produtiva.",
+    features: ["Qualificação de fornecedores", "Auditorias técnicas", "Gestão de contratos"],
+    fullDescription: "Nossa assessoria para terceirização oferece suporte estratégico completo para empresas que buscam parceiros confiáveis para produção. Atuamos na Gestão de Produção, Gestão de Estoque e Acompanhamento de Processo, realizando todo o ciclo de prospecção, qualificação e monitoramento de fornecedores, garantindo que sua marca mantenha os padrões de qualidade e conformidade regulatória mesmo em produções terceirizadas.",
+    benefits: [
+      "Redução de custos operacionais",
+      "Acesso a capacidade produtiva sem investimento em infraestrutura",
+      "Garantia de qualidade e conformidade",
+      "Flexibilidade para demandas sazonais",
+      "Mitigação de riscos na cadeia de suprimentos",
+      "Mão de Obra Especializada"
+    ],
+    process: [
+      { step: "Análise de Necessidades", description: "Levantamento detalhado das especificações técnicas e volume de produção" },
+      { step: "Prospecção de Parceiros", description: "Identificação e pré-qualificação de potenciais fornecedores" },
+      { step: "Auditoria Técnica", description: "Avaliação in loco das instalações e processos dos candidatos" },
+      { step: "Negociação e Contratos", description: "Suporte na elaboração de contratos e acordos de qualidade" },
+      { step: "Acompanhamento Contínuo", description: "Monitoramento da qualidade e desempenho do parceiro" }
+    ]
+  },
+  {
+    slug: "viabilidade-de-negocio",
     icon: ChartNoAxesCombined,
-    title: "Estudo de Viabilidade",
-    description: "Análise técnica, econômica e estratégica para transformar oportunidades em decisões seguras de investimento.",
-    features: ["Novas plantas industriais", "Novos produtos", "Análise de investimento"],
-    fullDescription: "O Estudo de Viabilidade da Viabilizze apoia decisões estratégicas antes de comprometer recursos. Avaliamos a implantação de novas plantas, a criação de novos produtos e projetos de investimento sob as perspectivas técnica, regulatória, operacional e econômico-financeira.",
+    title: "Viabilidade de Negócio",
+    description: "Análise estratégica para validar oportunidades, reduzir riscos e orientar decisões de crescimento e investimento.",
+    features: ["Análise de mercado", "Cenários financeiros", "Plano de implementação"],
+    fullDescription: "A Viabilidade de Negócio da Viabilizze avalia se uma oportunidade pode se transformar em um negócio sustentável e rentável. Estudamos novos empreendimentos, expansão de operações, lançamento de produtos e investimentos, conectando mercado, operação e finanças para apoiar uma decisão segura.",
     benefits: [
       "Decisões baseadas em dados e cenários",
       "Redução de riscos antes do investimento",
-      "Dimensionamento de capacidade e estrutura",
-      "Avaliação de custos e retorno esperado",
-      "Identificação de requisitos regulatórios",
+      "Clareza sobre mercado e posicionamento",
+      "Avaliação de custos, receitas e retorno",
+      "Identificação de riscos e oportunidades",
       "Plano claro para os próximos passos"
     ],
     process: [
-      { step: "Entendimento do Projeto", description: "Levantamento dos objetivos, premissas, escopo e expectativas do investimento" },
-      { step: "Análise de Mercado e Produto", description: "Avaliação da oportunidade, posicionamento e requisitos do produto ou operação" },
-      { step: "Estudo Técnico e Operacional", description: "Definição de processo, capacidade, estrutura, fornecedores e necessidades industriais" },
+      { step: "Entendimento da Oportunidade", description: "Levantamento dos objetivos, premissas, escopo e expectativas do negócio" },
+      { step: "Análise de Mercado", description: "Avaliação de demanda, concorrência, público e posicionamento da oportunidade" },
+      { step: "Estudo Operacional", description: "Definição de estrutura, recursos, processos e capacidade necessários" },
       { step: "Modelagem Econômico-Financeira", description: "Estimativa de investimentos, custos, receitas, cenários e indicadores de retorno" },
       { step: "Recomendação Estratégica", description: "Entrega de relatório conclusivo com riscos, oportunidades e plano de implementação" }
     ]
