@@ -8,6 +8,7 @@ import { services } from "@/lib/services-data"
 
 export function Services() {
   const [activeService, setActiveService] = useState(0)
+  const featuredService = services.find((service) => service.slug === "assessoria-industrial")
 
   return (
     <section id="servicos" className="py-20 lg:py-32 bg-background">
@@ -25,9 +26,48 @@ export function Services() {
           </p>
         </div>
 
+        {/* Featured Service */}
+        {featuredService && (
+          <Link
+            href={`/servicos/${featuredService.slug}`}
+            className="group mb-10 block overflow-hidden rounded-2xl border border-primary/30 bg-primary/[0.06] shadow-lg shadow-primary/10 transition-all duration-300 hover:-translate-y-1 hover:border-primary hover:shadow-xl hover:shadow-primary/15"
+          >
+            <div className="flex flex-col gap-6 p-6 md:flex-row md:items-center md:justify-between md:p-8">
+              <div className="flex items-start gap-4">
+                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-primary text-primary-foreground shadow-md shadow-primary/20">
+                  <featuredService.icon className="h-7 w-7" />
+                </div>
+                <div>
+                  <div className="mb-2 flex flex-wrap items-center gap-3">
+                    <span className="text-xs font-bold uppercase tracking-[0.18em] text-primary">
+                      Serviço em destaque
+                    </span>
+                    <span className="rounded-full bg-primary px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-primary-foreground">
+                      Assessoria Industrial
+                    </span>
+                  </div>
+                  <h3 className="text-2xl font-bold text-foreground md:text-3xl">
+                    Assessoria Industrial
+                  </h3>
+                  <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted-foreground md:text-base">
+                    {featuredService.description}
+                  </p>
+                </div>
+              </div>
+              <span className="inline-flex shrink-0 items-center gap-2 text-sm font-semibold text-primary transition-all group-hover:gap-3">
+                Conheça a solução
+                <ArrowRight className="h-5 w-5" />
+              </span>
+            </div>
+            <div className="h-1 bg-primary" />
+          </Link>
+        )}
+
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((service, index) => (
+          {services
+            .filter((service) => service.slug !== featuredService?.slug)
+            .map((service, index) => (
             <Link
               key={service.slug}
               href={`/servicos/${service.slug}`}
@@ -54,29 +94,11 @@ export function Services() {
                 <h3 className="text-xl font-semibold text-card-foreground">
                   {service.title}
                 </h3>
-                {service.slug === "assessoria-industrial" && (
-                  <span className="shrink-0 rounded-full bg-primary px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-primary-foreground">
-                    Destaque
-                  </span>
-                )}
+
               </div>
               <p className="text-muted-foreground text-sm leading-relaxed mb-4">
                 {service.description}
               </p>
-
-              {service.slug === "assessoria-industrial" && (
-                <div className="mb-4 rounded-lg border border-primary/25 bg-primary/5 p-3">
-                  <p className="text-xs font-semibold uppercase tracking-wide text-primary mb-1">
-                    Assessoria para sua indústria
-                  </p>
-                  <p className="text-sm leading-relaxed text-card-foreground">
-                    Diagnóstico, estratégia e acompanhamento para decisões mais eficientes.
-                  </p>
-                  <span className="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-primary">
-                    Conheça esta solução <ArrowRight className="h-3 w-3" />
-                  </span>
-                </div>
-              )}
 
               {/* Features */}
               <ul className="space-y-1.5 mb-4">
