@@ -8,6 +8,7 @@ import {
   ClipboardCheck,
   Handshake,
   Briefcase,
+  ChartNoAxesCombined,
   LucideIcon
 } from "lucide-react"
 
@@ -67,6 +68,29 @@ export const services: Service[] = [
       { step: "Plano de Ação", description: "Elaboração de estratégias e cronograma de implementação" },
       { step: "Implementação", description: "Execução das melhorias com acompanhamento técnico" },
       { step: "Monitoramento", description: "Avaliação de resultados e ajustes necessários" }
+    ]
+  },
+  {
+    slug: "estudo-de-viabilidade",
+    icon: ChartNoAxesCombined,
+    title: "Estudo de Viabilidade",
+    description: "Análise técnica, econômica e estratégica para transformar oportunidades em decisões seguras de investimento.",
+    features: ["Novas plantas industriais", "Novos produtos", "Análise de investimento"],
+    fullDescription: "O Estudo de Viabilidade da Viabilizze apoia decisões estratégicas antes de comprometer recursos. Avaliamos a implantação de novas plantas, a criação de novos produtos e projetos de investimento sob as perspectivas técnica, regulatória, operacional e econômico-financeira.",
+    benefits: [
+      "Decisões baseadas em dados e cenários",
+      "Redução de riscos antes do investimento",
+      "Dimensionamento de capacidade e estrutura",
+      "Avaliação de custos e retorno esperado",
+      "Identificação de requisitos regulatórios",
+      "Plano claro para os próximos passos"
+    ],
+    process: [
+      { step: "Entendimento do Projeto", description: "Levantamento dos objetivos, premissas, escopo e expectativas do investimento" },
+      { step: "Análise de Mercado e Produto", description: "Avaliação da oportunidade, posicionamento e requisitos do produto ou operação" },
+      { step: "Estudo Técnico e Operacional", description: "Definição de processo, capacidade, estrutura, fornecedores e necessidades industriais" },
+      { step: "Modelagem Econômico-Financeira", description: "Estimativa de investimentos, custos, receitas, cenários e indicadores de retorno" },
+      { step: "Recomendação Estratégica", description: "Entrega de relatório conclusivo com riscos, oportunidades e plano de implementação" }
     ]
   },
   {

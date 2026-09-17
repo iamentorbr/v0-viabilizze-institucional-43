@@ -50,12 +50,33 @@ export function Services() {
               </div>
 
               {/* Content */}
-              <h3 className="text-xl font-semibold text-card-foreground mb-2">
-                {service.title}
-              </h3>
+              <div className="flex items-start justify-between gap-3 mb-2">
+                <h3 className="text-xl font-semibold text-card-foreground">
+                  {service.title}
+                </h3>
+                {service.slug === "assessoria-industrial" && (
+                  <span className="shrink-0 rounded-full bg-primary/10 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-primary">
+                    Estratégico
+                  </span>
+                )}
+              </div>
               <p className="text-muted-foreground text-sm leading-relaxed mb-4">
                 {service.description}
               </p>
+
+              {service.slug === "assessoria-industrial" && (
+                <div className="mb-4 rounded-lg border border-primary/25 bg-primary/5 p-3">
+                  <p className="text-xs font-semibold uppercase tracking-wide text-primary mb-1">
+                    Inclui Estudo de Viabilidade
+                  </p>
+                  <p className="text-sm leading-relaxed text-card-foreground">
+                    Para novas plantas, novos produtos e decisões de investimento.
+                  </p>
+                  <span className="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-primary">
+                    Conheça esta solução <ArrowRight className="h-3 w-3" />
+                  </span>
+                </div>
+              )}
 
               {/* Features */}
               <ul className="space-y-1.5 mb-4">
