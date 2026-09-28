@@ -76,7 +76,7 @@ export function About() {
             {/* Foto institucional */}
             <div className="overflow-hidden rounded-2xl bg-card shadow-lg border border-border">
               <Image
-                src="/quem-somos.png"
+                src="/quem-somos-atualizada.png"
                 alt="Profissional da Viabilizze em seu escritório"
                 width={1080}
                 height={1080}

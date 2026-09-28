@@ -108,7 +108,7 @@ export default function QuemSomosPage() {
               {/* Profile Photo */}
               <div className="rounded-2xl overflow-hidden shadow-lg border border-border">
                 <Image
-                  src="/ana-corp.png"
+                  src="/quem-somos-atualizada.png"
                   alt="Fundadora da Viabilizze Assessoria Industrial"
                   width={600}
                   height={700}
