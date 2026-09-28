@@ -73,26 +73,19 @@ export function About() {
 
           {/* Visual Side */}
           <div className="space-y-6">
-            {/* Logo Card */}
-            <div className="bg-card rounded-2xl p-8 shadow-lg border border-border">
-              <div className="flex justify-center mb-6">
-                <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/icone-transparente-kmBsGL4v9zcX6PmVsbtYap3tOnHeve.png"
-                  alt="Viabilizze Logo"
-                  width={120}
-                  height={120}
-                  className="w-24 h-24"
-                />
-              </div>
-              <div className="text-center">
-                <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/viabilize-logo-transprnt-METaVIlgFhCWg9emMHHqpIrXOMBJYK.png"
-                  alt="Viabilizze"
-                  width={200}
-                  height={50}
-                  className="h-8 w-auto mx-auto"
-                />
-                <p className="text-muted-foreground mt-3 text-sm">Assessoria Industrial</p>
+            {/* Foto institucional */}
+            <div className="overflow-hidden rounded-2xl bg-card shadow-lg border border-border">
+              <Image
+                src="/quem-somos.png"
+                alt="Profissional da Viabilizze em seu escritório"
+                width={1080}
+                height={1080}
+                className="aspect-square w-full object-cover"
+                priority
+              />
+              <div className="px-6 py-5 text-center">
+                <p className="font-semibold text-card-foreground">Viabilizze Assessoria Industrial</p>
+                <p className="mt-1 text-sm text-muted-foreground">Planejamento, estratégia e resultados</p>
               </div>
             </div>
 
