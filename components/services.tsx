@@ -9,6 +9,7 @@ import { services } from "@/lib/services-data"
 export function Services() {
   const [activeService, setActiveService] = useState(0)
   const featuredService = services.find((service) => service.slug === "assessoria-industrial")
+  const coPackerService = services.find((service) => service.slug === "co-packer")
 
   return (
     <section id="servicos" className="py-20 lg:py-32 bg-background">
@@ -63,10 +64,45 @@ export function Services() {
           </Link>
         )}
 
+        {/* Co-Packer Highlight */}
+        {coPackerService && (
+          <Link
+            href={`/servicos/${coPackerService.slug}`}
+            className="group mb-10 block overflow-hidden rounded-2xl bg-secondary shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+          >
+            <div className="flex flex-col gap-6 p-6 md:flex-row md:items-center md:justify-between md:p-8">
+              <div className="flex items-start gap-4">
+                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-primary text-primary-foreground shadow-md shadow-primary/20">
+                  <coPackerService.icon className="h-7 w-7" />
+                </div>
+                <div>
+                  <span className="mb-2 inline-block rounded-full bg-primary px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-primary-foreground">
+                    Co-Packer
+                  </span>
+                  <h3 className="text-2xl font-bold text-secondary-foreground md:text-3xl">
+                    Contato e Representação dos melhores Co-packers nacionais
+                  </h3>
+                  <p className="mt-1 text-lg font-semibold text-primary md:text-xl">
+                    e Gestão Full-Serviço para Produção de Bebidas
+                  </p>
+                  <p className="mt-3 max-w-2xl text-sm leading-relaxed text-secondary-foreground/80 md:text-base">
+                    Produza sua bebida sem montar fábrica: conectamos sua marca aos parceiros certos e cuidamos da produção de ponta a ponta.
+                  </p>
+                </div>
+              </div>
+              <span className="inline-flex shrink-0 items-center gap-2 text-sm font-semibold text-primary transition-all group-hover:gap-3">
+                Conheça o serviço
+                <ArrowRight className="h-5 w-5" />
+              </span>
+            </div>
+            <div className="h-1 bg-primary" />
+          </Link>
+        )}
+
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services
-            .filter((service) => service.slug !== featuredService?.slug)
+            .filter((service) => service.slug !== featuredService?.slug && service.slug !== coPackerService?.slug)
             .map((service, index) => (
             <Link
               key={service.slug}
