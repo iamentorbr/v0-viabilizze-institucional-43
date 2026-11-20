@@ -86,8 +86,7 @@ export function Services() {
                     e Gestão Full-Serviço para Produção de Bebidas
                   </p>
                   <p className="mt-3 max-w-2xl text-sm leading-relaxed text-secondary-foreground/80 md:text-base">
-                    Produza sua bebida sem montar fábrica: conectamos sua marca aos parceiros certos e cuidamos da produção de ponta a ponta.
-                  </p>
+                    Representamos os melhores co-packers nacionais e conectamos a sua empresa ao parceiro certo, com gestão da produção de ponta a ponta.</p>
                 </div>
               </div>
               <span className="inline-flex shrink-0 items-center gap-2 text-sm font-semibold text-primary transition-all group-hover:gap-3">

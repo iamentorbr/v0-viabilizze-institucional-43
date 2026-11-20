@@ -50,22 +50,22 @@ export const services: Service[] = [
   {
     slug: "co-packer",
     icon: Factory,
-    title: "Co-Packer: Representação e Gestão Full-Serviço para Bebidas",
-    description: "Contato e representação dos melhores co-packers nacionais, com gestão full-serviço da produção da sua bebida, do desenvolvimento ao produto acabado.",
-    features: ["Seleção de co-packers nacionais", "Representação e negociação", "Gestão full-serviço da produção"],
-    fullDescription: "Contato e Representação dos melhores co-packers nacionais e Gestão Full-Serviço para Produção de Bebidas. A Viabilizze faz a ponte entre a sua marca e os co-packers certos para o seu produto: indicamos e aproximamos os parceiros adequados, representamos os seus interesses na negociação e gerenciamos a produção de ponta a ponta, para você lançar e escalar sem montar fábrica nem administrar sozinho a operação terceirizada.",
+    title: "Co-Packer: Conexão com os Melhores Co-Packers Nacionais e Gestão Full-Serviço",
+    description: "Representamos os melhores co-packers nacionais e conectamos a sua empresa ao parceiro certo, com gestão full-serviço da produção de bebidas.",
+    features: ["Representação de co-packers nacionais", "Conexão com a empresa produtora", "Gestão full-serviço da produção"],
+    fullDescription: "Contato e Representação dos melhores co-packers nacionais e Gestão Full-Serviço para Produção de Bebidas. A Viabilizze é a representante de co-packers nacionais e faz a conexão entre a sua empresa e o parceiro de produção mais adequado ao seu produto. Acompanhamos o processo da primeira conversa à produção, com gestão full-serviço, para você lançar e escalar sem montar fábrica.",
     benefits: [
-      "Acesso a co-packers nacionais qualificados, sem busca às cegas",
-      "Representação técnica e comercial da sua marca na negociação",
+      "Acesso direto aos co-packers que representamos, sem busca às cegas",
+      "Conexão com o parceiro mais adequado ao seu produto e volume",
       "Produção sem investimento em fábrica e equipamentos",
-      "Gestão única de formulação, regulatório, insumos e produção",
+      "Um único ponto de contato para o processo, do primeiro contato à produção",
       "Conformidade regulatória e padrão de qualidade acompanhados",
       "Mais tempo para a sua marca focar em vendas e mercado"
     ],
     process: [
-      { step: "Briefing do Produto", description: "Entendemos o produto, o volume, o posicionamento e as metas da sua marca" },
-      { step: "Seleção do Co-Packer", description: "Identificamos e aproximamos os co-packers nacionais mais adequados ao seu projeto" },
-      { step: "Representação e Negociação", description: "Atuamos em nome da sua marca nas condições técnicas, comerciais e contratuais" },
+      { step: "Briefing do Produto", description: "Entendemos o seu produto, o volume desejado, o posicionamento e as metas da sua marca" },
+      { step: "Conexão com o Co-Packer", description: "Indicamos e apresentamos o co-packer, dentre os que representamos, mais adequado ao seu projeto" },
+      { step: "Alinhamento e Contratação", description: "Intermediamos as condições técnicas e comerciais entre a sua empresa e o co-packer" },
       { step: "Gestão Full-Serviço da Produção", description: "Coordenamos desenvolvimento, insumos, produção e controle de qualidade de ponta a ponta" },
       { step: "Acompanhamento Contínuo", description: "Monitoramos resultados, qualidade e prazos para sustentar o crescimento" }
     ]
