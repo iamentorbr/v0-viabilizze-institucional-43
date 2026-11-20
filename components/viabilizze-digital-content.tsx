@@ -1,0 +1,278 @@
+import { Check, ArrowUpRight } from "lucide-react"
+
+const whatsappBase = "https://wa.me/5518997086083?text="
+
+const conversationLinks = {
+  expert: `${whatsappBase}${encodeURIComponent("Olá! Gostaria de saber mais sobre os produtos digitais da Viabilizze.")}`,
+  calculator: `${whatsappBase}${encodeURIComponent("Olá! Quero conhecer a Calculadora de Polpa/Suco da Viabilizze.")}`,
+  viability: `${whatsappBase}${encodeURIComponent("Olá! Quero fazer a Viabilidade de Projeto do meu produto.")}`,
+  import: `${whatsappBase}${encodeURIComponent("Olá! Quero falar sobre o Regulatório para Importação (produto e empresa).")}`,
+}
+
+const moments = [
+  {
+    eyebrow: "ESTOU FORMULANDO",
+    title: "Preciso saber se minha formulação está de acordo",
+    service: "Calculadora de Polpa/Suco",
+    href: "#calculadora",
+  },
+  {
+    eyebrow: "VOU LANÇAR UM PRODUTO",
+    title: "Quero saber se a ideia se sustenta antes de investir",
+    service: "Viabilidade de Projeto",
+    href: "#viabilidade",
+  },
+  {
+    eyebrow: "QUERO IMPORTAR",
+    title: "Preciso regularizar o produto e a minha empresa",
+    service: "Regulatório para Importação",
+    href: "#regulatorio",
+  },
+]
+
+const calculatorFeatures = [
+  "Cálculo por Brix, sem planilhas manuais",
+  "Validação automática da legislação MAPA",
+  "13 frutas já cadastradas",
+  "Acesso web, de qualquer dispositivo",
+]
+
+const viabilityFeatures = [
+  "Análise de investimento",
+  "Posicionamento de qualidade",
+  "Público-alvo e concorrência",
+  "Acesso direto à assessoria para os próximos passos",
+]
+
+const importProductFeatures = [
+  "Enquadramento e classificação da bebida",
+  "Registro do produto",
+  "Análise e adequação de rotulagem",
+  "Conferência de padrões de identidade e qualidade",
+]
+
+const importBusinessFeatures = [
+  "Registro do estabelecimento importador",
+  "Habilitação e licenças necessárias para operar",
+  "Organização da documentação da empresa",
+  "Orientação sobre obrigações após a importação",
+]
+
+const steps = [
+  {
+    title: "Conte sobre o seu produto",
+    description: "Fale com a nossa equipe ou preencha o questionário e diga em que etapa você está.",
+  },
+  {
+    title: "Indicamos o serviço certo",
+    description: "Você não precisa adivinhar: dizemos qual solução resolve o seu caso e o que será necessário.",
+  },
+  {
+    title: "Você segue com segurança",
+    description: "Com os números, o relatório ou a regularização em mãos, o próximo passo fica claro.",
+  },
+]
+
+function ContactLink({ href, children, light = false }: { href: string; children: React.ReactNode; light?: boolean }) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`inline-flex min-h-12 items-center justify-center gap-2 rounded-lg px-6 py-3 text-sm font-bold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C2410C] focus-visible:ring-offset-2 ${
+        light
+          ? "bg-white text-[#C2410C] hover:bg-orange-50"
+          : "bg-[#C2410C] text-white hover:bg-[#9A3412]"
+      }`}
+    >
+      {children}
+      <ArrowUpRight aria-hidden="true" className="size-4" />
+    </a>
+  )
+}
+
+function FeatureList({ items }: { items: string[] }) {
+  return (
+    <ul className="flex flex-col gap-3">
+      {items.map((item) => (
+        <li key={item} className="flex items-start gap-3 text-sm leading-relaxed text-[#3F4652] sm:text-[15px]">
+          <Check aria-hidden="true" className="mt-0.5 size-4 shrink-0 text-[#C2410C]" strokeWidth={2.5} />
+          <span>{item}</span>
+        </li>
+      ))}
+    </ul>
+  )
+}
+
+function ServiceCard({
+  id,
+  number,
+  label,
+  title,
+  description,
+  action,
+  href,
+  featuresTitle,
+  features,
+}: {
+  id: string
+  number: string
+  label: string
+  title: string
+  description: string
+  action: string
+  href: string
+  featuresTitle: string
+  features: string[]
+}) {
+  return (
+    <article id={id} className="scroll-mt-28 rounded-2xl border border-[#E6DFD8] bg-white p-6 sm:p-8 lg:p-10">
+      <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-stretch">
+        <div className="flex flex-col items-start gap-4">
+          <p className="text-xs font-bold tracking-[0.12em] text-[#C2410C]">{number} · {label}</p>
+          <h3 className="text-2xl font-bold leading-tight tracking-tight text-[#1F2430] sm:text-[28px]">{title}</h3>
+          <p className="text-[15px] leading-7 text-[#4A4F5C]">{description}</p>
+          <div className="mt-2">
+            <ContactLink href={href}>{action}</ContactLink>
+          </div>
+        </div>
+        <div className="flex flex-col justify-center gap-5 rounded-xl bg-[#FFF4EC] p-6 sm:p-7">
+          <h4 className="text-sm font-bold text-[#1F2430]">{featuresTitle}</h4>
+          <FeatureList items={features} />
+        </div>
+      </div>
+    </article>
+  )
+}
+
+function ImportService() {
+  return (
+    <article id="regulatorio" className="scroll-mt-28 flex flex-col gap-7 rounded-2xl border-2 border-[#C2410C] bg-white p-6 sm:p-8 lg:p-10">
+      <div className="flex max-w-3xl flex-col gap-4">
+        <p className="text-xs font-bold tracking-[0.12em] text-[#C2410C]">03 · ASSESSORIA ESPECIALIZADA</p>
+        <h3 className="text-2xl font-bold leading-tight tracking-tight text-[#1F2430] sm:text-[28px]">Regulatório para Importação de Bebidas</h3>
+        <p className="text-[15px] leading-7 text-[#4A4F5C]">
+          Para importar bebidas é preciso regularizar duas frentes: o produto e a empresa. Cuidamos das duas, para que a sua carga não fique parada por falta de documento ou por exigência que ninguém avisou.
+        </p>
+      </div>
+
+      <div className="grid gap-5 lg:grid-cols-2">
+        <div className="flex flex-col gap-4 rounded-xl bg-[#FFF4EC] p-6 sm:p-7">
+          <p className="text-xs font-bold tracking-wide text-[#C2410C]">PARTE 1</p>
+          <h4 className="text-xl font-bold text-[#1F2430]">Regulatório do Produto</h4>
+          <p className="text-sm leading-6 text-[#4A4F5C]">Deixamos o produto em conformidade com a legislação brasileira antes da chegada ao país.</p>
+          <FeatureList items={importProductFeatures} />
+        </div>
+        <div className="flex flex-col gap-4 rounded-xl bg-[#FFF4EC] p-6 sm:p-7">
+          <p className="text-xs font-bold tracking-wide text-[#C2410C]">PARTE 2</p>
+          <h4 className="text-xl font-bold text-[#1F2430]">Regulatório da Empresa</h4>
+          <p className="text-sm leading-6 text-[#4A4F5C]">Deixamos a sua empresa apta a importar e a comercializar bebidas de forma regular.</p>
+          <FeatureList items={importBusinessFeatures} />
+        </div>
+      </div>
+
+      <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
+        <ContactLink href={conversationLinks.import}>Quero regularizar minha importação</ContactLink>
+        <p className="text-sm leading-6 text-[#4A4F5C]">Conte o que você pretende importar e indicamos por onde começar.</p>
+      </div>
+    </article>
+  )
+}
+
+export function ViabilizzeDigitalContent() {
+  return (
+    <div className="bg-white text-[#1F2430]">
+      <section className="bg-[#FFF4EC] px-4 py-16 sm:px-8 sm:py-20 lg:px-14 lg:py-[88px]">
+        <div className="mx-auto flex max-w-5xl flex-col items-center gap-6 text-center">
+          <p className="text-xs font-bold tracking-[0.2em] text-[#C2410C]">VIABILIZZE DIGITAL</p>
+          <h1 className="max-w-4xl text-3xl font-bold leading-tight tracking-tight text-[#1F2430] sm:text-4xl lg:text-[46px]">
+            Da formulação ao registro: resolva o seu produto de bebida com quem entende do assunto
+          </h1>
+          <p className="max-w-3xl text-base leading-7 text-[#4A4F5C] sm:text-lg sm:leading-8">
+            Três soluções da assessoria Viabilizze para você calcular, decidir e regularizar com segurança: a Calculadora de Polpa/Suco, o Estudo de Viabilidade do seu projeto e o Regulatório para Importação.
+          </p>
+          <div className="mt-2 flex w-full flex-col justify-center gap-3 sm:w-auto sm:flex-row">
+            <a href="#servicos" className="inline-flex min-h-12 items-center justify-center rounded-lg bg-[#C2410C] px-7 py-3 text-base font-bold text-white transition-colors hover:bg-[#9A3412] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C2410C] focus-visible:ring-offset-2">
+              Conheça os serviços
+            </a>
+            <a href={conversationLinks.expert} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-12 items-center justify-center rounded-lg border-2 border-[#C2410C] bg-white px-6 py-3 text-base font-bold text-[#C2410C] transition-colors hover:bg-orange-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C2410C] focus-visible:ring-offset-2">
+              Falar com um especialista
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section className="px-4 pb-8 pt-16 sm:px-8 sm:pt-[72px] lg:px-14">
+        <div className="mx-auto max-w-6xl">
+          <div className="mx-auto mb-8 max-w-2xl text-center sm:mb-9">
+            <h2 className="text-2xl font-bold tracking-tight text-[#1F2430] sm:text-[28px]">Em que momento está o seu projeto?</h2>
+            <p className="mt-2 text-sm leading-6 text-[#4A4F5C] sm:text-base">Escolha a situação mais próxima da sua e vá direto ao serviço certo.</p>
+          </div>
+          <div className="grid gap-4 md:grid-cols-3 md:gap-5">
+            {moments.map((moment) => (
+              <a key={moment.href} href={moment.href} className="group flex min-h-44 flex-col items-start gap-2 rounded-xl border border-[#E6DFD8] bg-white p-6 transition-all hover:-translate-y-0.5 hover:border-[#C2410C]/50 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C2410C] focus-visible:ring-offset-2">
+                <span className="text-xs font-bold tracking-wide text-[#C2410C]">{moment.eyebrow}</span>
+                <span className="text-lg font-bold leading-snug text-[#1F2430]">{moment.title}</span>
+                <span className="mt-auto pt-2 text-sm text-[#4A4F5C] group-hover:text-[#C2410C]">{moment.service} <span aria-hidden="true">→</span></span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="servicos" className="scroll-mt-24 px-4 py-12 sm:px-8 sm:py-14 lg:px-14 lg:py-16">
+        <div className="mx-auto flex max-w-6xl flex-col gap-6 sm:gap-8">
+          <ServiceCard
+            id="calculadora"
+            number="01"
+            label="FERRAMENTA ONLINE"
+            title="Calculadora de Percentual de Polpa/Suco"
+            description="Informe a sua formulação e descubra o percentual de polpa e a quantidade de suco concentrado, com validação automática conforme a legislação do MAPA (IN 49/2018) para Refresco, Suco Integral e Néctar."
+            action="Quero usar a calculadora"
+            href={conversationLinks.calculator}
+            featuresTitle="O que você resolve com ela"
+            features={calculatorFeatures}
+          />
+          <ServiceCard
+            id="viabilidade"
+            number="02"
+            label="ESTUDO PERSONALIZADO"
+            title="Viabilidade de Projeto (Orçamento de Desenvolvimento de Produto)"
+            description="Responda a um questionário guiado sobre o seu produto e receba um Relatório de Viabilidade feito para o seu caso: quanto investir, onde posicionar a qualidade, para quem vender e contra quem você vai competir."
+            action="Quero avaliar meu projeto"
+            href={conversationLinks.viability}
+            featuresTitle="O que o relatório traz"
+            features={viabilityFeatures}
+          />
+          <ImportService />
+        </div>
+      </section>
+
+      <section className="bg-[#FAFAF8] px-4 py-16 sm:px-8 sm:py-[72px] lg:px-14">
+        <div className="mx-auto max-w-6xl">
+          <div className="mb-9 text-center">
+            <h2 className="text-2xl font-bold tracking-tight text-[#1F2430] sm:text-[28px]">Como funciona</h2>
+            <p className="mt-2 text-sm text-[#4A4F5C] sm:text-base">Simples do primeiro contato até o resultado.</p>
+          </div>
+          <ol className="grid gap-8 md:grid-cols-3 md:gap-6">
+            {steps.map((step, index) => (
+              <li key={step.title} className="flex flex-col items-start gap-3">
+                <span className="flex size-11 items-center justify-center rounded-full bg-[#C2410C] text-base font-bold text-white" aria-hidden="true">{index + 1}</span>
+                <h3 className="text-lg font-bold text-[#1F2430]">{step.title}</h3>
+                <p className="text-sm leading-6 text-[#4A4F5C]">{step.description}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      <section className="bg-[#C2410C] px-4 py-14 text-white sm:px-8 sm:py-16 lg:px-14">
+        <div className="mx-auto flex max-w-3xl flex-col items-center gap-5 text-center">
+          <h2 className="text-2xl font-bold leading-tight sm:text-[30px]">Ficou com dúvida sobre qual serviço escolher?</h2>
+          <p className="text-base leading-7 text-white/90 sm:text-[17px]">Fale com a nossa equipe técnica. Em poucos minutos entendemos o seu caso e mostramos o melhor caminho.</p>
+          <ContactLink href={conversationLinks.expert} light>Falar no WhatsApp</ContactLink>
+        </div>
+      </section>
+    </div>
+  )
+}
