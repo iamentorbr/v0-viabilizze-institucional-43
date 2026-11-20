@@ -7,6 +7,7 @@ const conversationLinks = {
   calculator: `${whatsappBase}${encodeURIComponent("Olá! Quero conhecer a Calculadora de Polpa/Suco da Viabilizze.")}`,
   viability: `${whatsappBase}${encodeURIComponent("Olá! Quero fazer a Viabilidade de Projeto do meu produto.")}`,
   regulatory: `${whatsappBase}${encodeURIComponent("Olá! Quero saber como a assessoria regulatória da Viabilizze pode ajudar meu produto ou empresa.")}`,
+  marketing: `${whatsappBase}${encodeURIComponent("Olá! Quero saber como a assessoria de Marketing e Gestão Comercial da Viabilizze pode ajudar minha empresa de alimentos.")}`,
 }
 
 const moments = [
@@ -56,6 +57,53 @@ const businessRegulatoryFeatures = [
   "Registros e licenças necessários para operar",
   "Organização da documentação da empresa",
   "Orientação sobre obrigações regulatórias contínuas",
+]
+
+const marketingPillars = [
+  {
+    label: "FRENTE 1",
+    title: "Ativação de Novos Produtos",
+    description: "Planejamos a entrada do seu produto no mercado, do posicionamento inicial à estratégia comercial de lançamento.",
+    features: [
+      "Plano de lançamento e go-to-market",
+      "Definição de canais e público-alvo",
+      "Estratégia de preço e portfólio",
+      "Apoio na ativação junto a clientes e distribuidores",
+    ],
+  },
+  {
+    label: "FRENTE 2",
+    title: "Reposicionamento de Produtos e Marcas",
+    description: "Revisamos a proposta de valor de produtos já no mercado para renovar a percepção, o espaço no ponto de venda e o resultado comercial.",
+    features: [
+      "Diagnóstico de posicionamento atual",
+      "Revisão de proposta de valor e diferenciais",
+      "Ajustes de portfólio, apresentação e embalagem",
+      "Plano de transição e reposicionamento",
+    ],
+  },
+  {
+    label: "FRENTE 3",
+    title: "Estudo de Mercado",
+    description: "Reunimos informações do setor, do consumidor e da concorrência para sustentar decisões comerciais com mais segurança.",
+    features: [
+      "Análise de mercado e tendências do segmento",
+      "Mapeamento de concorrentes e referências de preço",
+      "Perfil e comportamento do consumidor",
+      "Identificação de oportunidades e nichos",
+    ],
+  },
+  {
+    label: "FRENTE 4",
+    title: "Comunicação Estratégica",
+    description: "Construímos uma comunicação coerente com o posicionamento do produto, voltada ao seu público e aos objetivos comerciais da empresa.",
+    features: [
+      "Definição de mensagem e narrativa de marca",
+      "Comunicação para o trade e para o consumidor final",
+      "Materiais comerciais e apresentações de vendas",
+      "Alinhamento entre comunicação e gestão comercial",
+    ],
+  },
 ]
 
 const steps = [
@@ -179,6 +227,36 @@ function RegulatoryService() {
   )
 }
 
+function MarketingService() {
+  return (
+    <article id="marketing" className="scroll-mt-28 flex flex-col gap-7 rounded-2xl border-2 border-[#C2410C] bg-white p-6 sm:p-8 lg:p-10">
+      <div className="flex max-w-3xl flex-col gap-4">
+        <p className="text-xs font-bold tracking-[0.12em] text-[#C2410C]">04 · ASSESSORIA ESPECIALIZADA</p>
+        <h3 className="text-2xl font-bold leading-tight tracking-tight text-[#1F2430] sm:text-[28px]">Marketing e Gestão Comercial Especializada para a Indústria de Alimentos</h3>
+        <p className="text-[15px] leading-7 text-[#4A4F5C]">
+          Apoiamos a indústria de alimentos na ativação de novos produtos, no reposicionamento de itens já no mercado, em estudos de mercado e na comunicação estratégica. Unimos conhecimento técnico do setor e visão comercial para ajudar você a posicionar seu produto, chegar ao cliente certo e decidir com mais segurança.
+        </p>
+      </div>
+
+      <div className="grid gap-5 lg:grid-cols-2">
+        {marketingPillars.map((pillar) => (
+          <div key={pillar.title} className="flex flex-col gap-4 rounded-xl bg-[#FFF4EC] p-6 sm:p-7">
+            <p className="text-xs font-bold tracking-wide text-[#C2410C]">{pillar.label}</p>
+            <h4 className="text-xl font-bold text-[#1F2430]">{pillar.title}</h4>
+            <p className="text-sm leading-6 text-[#4A4F5C]">{pillar.description}</p>
+            <FeatureList items={pillar.features} />
+          </div>
+        ))}
+      </div>
+
+      <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
+        <ContactLink href={conversationLinks.marketing}>Quero fortalecer meu produto no mercado</ContactLink>
+        <p className="text-sm leading-6 text-[#4A4F5C]">Conte sobre o seu produto e o seu momento comercial e indicamos por onde começar.</p>
+      </div>
+    </article>
+  )
+}
+
 export function ViabilizzeDigitalContent() {
   return (
     <div className="bg-white text-[#1F2430]">
@@ -253,6 +331,7 @@ export function ViabilizzeDigitalContent() {
             features={viabilityFeatures}
           />
           <RegulatoryService />
+          <MarketingService />
         </div>
       </section>
 
