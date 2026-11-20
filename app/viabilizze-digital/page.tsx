@@ -3,9 +3,9 @@ import { Header } from "@/components/header"
 import { ViabilizzeDigitalContent } from "@/components/viabilizze-digital-content"
 
 export const metadata: Metadata = {
-  title: "Viabilizze Digital | Da formulação ao registro",
+  title: "Viabilizze Digital Premium | Soluções especializadas",
   description:
-    "Calcule, avalie e regularize seu produto de bebida com a Calculadora de Polpa/Suco, o Estudo de Viabilidade e a assessoria regulatória para importação da Viabilizze.",
+    "Serviços Premium Viabilizze para desenvolver, viabilizar e regularizar produtos, com expertise técnica, orientação especializada e soluções para cada etapa do projeto.",
 }
 
 export default function ViabilizzeDigitalPage() {
