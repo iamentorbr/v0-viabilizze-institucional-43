@@ -6,7 +6,7 @@ const conversationLinks = {
   expert: `${whatsappBase}${encodeURIComponent("Olá! Gostaria de saber mais sobre os produtos digitais da Viabilizze.")}`,
   calculator: `${whatsappBase}${encodeURIComponent("Olá! Quero conhecer a Calculadora de Polpa/Suco da Viabilizze.")}`,
   viability: `${whatsappBase}${encodeURIComponent("Olá! Quero fazer a Viabilidade de Projeto do meu produto.")}`,
-  import: `${whatsappBase}${encodeURIComponent("Olá! Quero falar sobre o Regulatório para Importação (produto e empresa).")}`,
+  regulatory: `${whatsappBase}${encodeURIComponent("Olá! Quero saber como a assessoria regulatória da Viabilizze pode ajudar meu produto ou empresa.")}`,
 }
 
 const moments = [
@@ -23,9 +23,9 @@ const moments = [
     href: "#viabilidade",
   },
   {
-    eyebrow: "QUERO IMPORTAR",
-    title: "Preciso regularizar o produto e a minha empresa",
-    service: "Regulatório para Importação",
+    eyebrow: "PRECISO REGULARIZAR",
+    title: "Quero adequar meu produto ou regularizar minha empresa",
+    service: "Assessoria Regulatória",
     href: "#regulatorio",
   },
 ]
@@ -44,18 +44,18 @@ const viabilityFeatures = [
   "Acesso direto à assessoria para os próximos passos",
 ]
 
-const importProductFeatures = [
-  "Enquadramento e classificação da bebida",
-  "Registro do produto",
+const productRegulatoryFeatures = [
+  "Enquadramento e classificação do produto",
+  "Registros e notificações aplicáveis",
   "Análise e adequação de rotulagem",
-  "Conferência de padrões de identidade e qualidade",
+  "Verificação de requisitos de identidade, qualidade e segurança",
 ]
 
-const importBusinessFeatures = [
-  "Registro do estabelecimento importador",
-  "Habilitação e licenças necessárias para operar",
+const businessRegulatoryFeatures = [
+  "Enquadramento das atividades e exigências",
+  "Registros e licenças necessários para operar",
   "Organização da documentação da empresa",
-  "Orientação sobre obrigações após a importação",
+  "Orientação sobre obrigações regulatórias contínuas",
 ]
 
 const steps = [
@@ -145,35 +145,35 @@ function ServiceCard({
   )
 }
 
-function ImportService() {
+function RegulatoryService() {
   return (
     <article id="regulatorio" className="scroll-mt-28 flex flex-col gap-7 rounded-2xl border-2 border-[#C2410C] bg-white p-6 sm:p-8 lg:p-10">
       <div className="flex max-w-3xl flex-col gap-4">
         <p className="text-xs font-bold tracking-[0.12em] text-[#C2410C]">03 · ASSESSORIA ESPECIALIZADA</p>
-        <h3 className="text-2xl font-bold leading-tight tracking-tight text-[#1F2430] sm:text-[28px]">Regulatório para Importação de Bebidas</h3>
+        <h3 className="text-2xl font-bold leading-tight tracking-tight text-[#1F2430] sm:text-[28px]">Assessoria Regulatória para Produtos e Empresas</h3>
         <p className="text-[15px] leading-7 text-[#4A4F5C]">
-          Para importar bebidas é preciso regularizar duas frentes: o produto e a empresa. Cuidamos das duas, para que a sua carga não fique parada por falta de documento ou por exigência que ninguém avisou.
+          Apoiamos empresas na adequação regulatória de produtos e na regularização da operação, com orientações alinhadas às exigências de cada atividade. Da classificação e documentação do produto às licenças e registros da empresa, ajudamos você a entender o que é necessário e avançar com segurança.
         </p>
       </div>
 
       <div className="grid gap-5 lg:grid-cols-2">
         <div className="flex flex-col gap-4 rounded-xl bg-[#FFF4EC] p-6 sm:p-7">
           <p className="text-xs font-bold tracking-wide text-[#C2410C]">PARTE 1</p>
-          <h4 className="text-xl font-bold text-[#1F2430]">Regulatório do Produto</h4>
-          <p className="text-sm leading-6 text-[#4A4F5C]">Deixamos o produto em conformidade com a legislação brasileira antes da chegada ao país.</p>
-          <FeatureList items={importProductFeatures} />
+          <h4 className="text-xl font-bold text-[#1F2430]">Adequação Regulatória de Produtos</h4>
+          <p className="text-sm leading-6 text-[#4A4F5C]">Orientamos a regularização do seu produto conforme as normas aplicáveis ao segmento, ao mercado e à sua finalidade.</p>
+          <FeatureList items={productRegulatoryFeatures} />
         </div>
         <div className="flex flex-col gap-4 rounded-xl bg-[#FFF4EC] p-6 sm:p-7">
           <p className="text-xs font-bold tracking-wide text-[#C2410C]">PARTE 2</p>
-          <h4 className="text-xl font-bold text-[#1F2430]">Regulatório da Empresa</h4>
-          <p className="text-sm leading-6 text-[#4A4F5C]">Deixamos a sua empresa apta a importar e a comercializar bebidas de forma regular.</p>
-          <FeatureList items={importBusinessFeatures} />
+          <h4 className="text-xl font-bold text-[#1F2430]">Regularização de Empresas</h4>
+          <p className="text-sm leading-6 text-[#4A4F5C]">Apoiamos a empresa na obtenção e organização dos registros, licenças e documentos necessários para operar.</p>
+          <FeatureList items={businessRegulatoryFeatures} />
         </div>
       </div>
 
       <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
-        <ContactLink href={conversationLinks.import}>Quero regularizar minha importação</ContactLink>
-        <p className="text-sm leading-6 text-[#4A4F5C]">Conte o que você pretende importar e indicamos por onde começar.</p>
+        <ContactLink href={conversationLinks.regulatory}>Quero regularizar meu produto ou empresa</ContactLink>
+        <p className="text-sm leading-6 text-[#4A4F5C]">Conte sobre o seu produto ou negócio e indicamos por onde começar.</p>
       </div>
     </article>
   )
@@ -189,7 +189,7 @@ export function ViabilizzeDigitalContent() {
             Da formulação ao registro: resolva o seu produto de bebida com quem entende do assunto
           </h1>
           <p className="max-w-3xl text-base leading-7 text-[#4A4F5C] sm:text-lg sm:leading-8">
-            Três soluções da assessoria Viabilizze para você calcular, decidir e regularizar com segurança: a Calculadora de Polpa/Suco, o Estudo de Viabilidade do seu projeto e o Regulatório para Importação.
+            Três soluções da assessoria Viabilizze para você calcular, decidir e regularizar com segurança: a Calculadora de Polpa/Suco, o Estudo de Viabilidade do seu projeto e a Assessoria Regulatória para Produtos e Empresas.
           </p>
           <div className="mt-2 flex w-full flex-col justify-center gap-3 sm:w-auto sm:flex-row">
             <a href="#servicos" className="inline-flex min-h-12 items-center justify-center rounded-lg bg-[#C2410C] px-7 py-3 text-base font-bold text-white transition-colors hover:bg-[#9A3412] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C2410C] focus-visible:ring-offset-2">
@@ -244,7 +244,7 @@ export function ViabilizzeDigitalContent() {
             featuresTitle="O que o relatório traz"
             features={viabilityFeatures}
           />
-          <ImportService />
+          <RegulatoryService />
         </div>
       </section>
 
