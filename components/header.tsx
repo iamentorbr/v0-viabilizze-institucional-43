@@ -10,6 +10,7 @@ const navItems = [
   { label: "Home", href: "/" },
   { label: "Serviços", href: "/#servicos" },
   { label: "Viabilizze Digital", href: "/viabilizze-digital" },
+  { label: "Global (EN)", href: "/global" },
   { label: "Quem Somos", href: "/quem-somos" },
   { label: "Contato", href: "/contato" },
 ]
