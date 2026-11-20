@@ -181,7 +181,7 @@ export function GlobalContent() {
             Tell us about your product. We will reply with the best path forward and what it takes to get started.
           </p>
           <ContactLink light>Message us on WhatsApp</ContactLink>
-          <p className="text-[13px] text-white/90">Based in Brazil · English and Portuguese support</p>
+          <p className="text-[13px] text-white/90">Based in Brazil · English, Spanish and Portuguese support</p>
         </div>
       </section>
     </div>
