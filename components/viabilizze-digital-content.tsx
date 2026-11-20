@@ -1,4 +1,4 @@
-import { Check, ArrowUpRight } from "lucide-react"
+import { Check, ArrowUpRight, Gem } from "lucide-react"
 
 const whatsappBase = "https://wa.me/5518997086083?text="
 
@@ -184,13 +184,21 @@ export function ViabilizzeDigitalContent() {
     <div className="bg-white text-[#1F2430]">
       <section className="bg-[#FFF4EC] px-4 py-16 sm:px-8 sm:py-20 lg:px-14 lg:py-[88px]">
         <div className="mx-auto flex max-w-5xl flex-col items-center gap-6 text-center">
-          <p className="text-xs font-bold tracking-[0.2em] text-[#C2410C]">VIABILIZZE DIGITAL</p>
+          <div className="inline-flex items-center gap-2 rounded-full border border-[#C08A2C]/40 bg-white/75 px-4 py-2 text-xs font-bold tracking-[0.12em] text-[#805B17] shadow-sm">
+            <Gem aria-hidden="true" className="size-4" />
+            <span>VIABILIZZE DIGITAL · SERVIÇOS PREMIUM</span>
+          </div>
           <h1 className="max-w-4xl text-3xl font-bold leading-tight tracking-tight text-[#1F2430] sm:text-4xl lg:text-[46px]">
-            Da formulação ao registro: resolva o seu produto de bebida com quem entende do assunto
+            Soluções premium para desenvolver, viabilizar e regularizar seu produto
           </h1>
           <p className="max-w-3xl text-base leading-7 text-[#4A4F5C] sm:text-lg sm:leading-8">
-            Três soluções da assessoria Viabilizze para você calcular, decidir e regularizar com segurança: a Calculadora de Polpa/Suco, o Estudo de Viabilidade do seu projeto e a Assessoria Regulatória para Produtos e Empresas.
+            Expertise técnica, orientação especializada e ferramentas para acompanhar cada etapa do seu projeto — da formulação à regularização, com a qualidade e o cuidado que o seu negócio merece.
           </p>
+          <ul aria-label="Diferenciais dos serviços Premium" className="flex flex-wrap justify-center gap-2 sm:gap-3">
+            <li className="rounded-full border border-[#D6C199] bg-white/70 px-3 py-1.5 text-xs font-semibold text-[#5F482A] sm:text-sm">Acompanhamento especializado</li>
+            <li className="rounded-full border border-[#D6C199] bg-white/70 px-3 py-1.5 text-xs font-semibold text-[#5F482A] sm:text-sm">Soluções para cada etapa</li>
+            <li className="rounded-full border border-[#D6C199] bg-white/70 px-3 py-1.5 text-xs font-semibold text-[#5F482A] sm:text-sm">Segurança regulatória</li>
+          </ul>
           <div className="mt-2 flex w-full flex-col justify-center gap-3 sm:w-auto sm:flex-row">
             <a href="#servicos" className="inline-flex min-h-12 items-center justify-center rounded-lg bg-[#C2410C] px-7 py-3 text-base font-bold text-white transition-colors hover:bg-[#9A3412] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C2410C] focus-visible:ring-offset-2">
               Conheça os serviços
